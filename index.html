@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NICHEGO SMESHNOGO — SoundWave Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">NICHEGO SMESHNOGO</a>
+      <nav class="header-nav">
+        <a href="#cases" class="nav-link">Кейсы</a>
+        <a href="#about" class="nav-link">О проекте</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+   <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+      <!-- Слой 1: Бесшовный асфальт -->
+      <div class="hero__bg"></div>
+
+      <!-- Слой 2: Сетка и технические метки -->
+      <div class="hero__grid-wrapper">
+        <div class="hero__grid-canvas"></div>
+        <div class="hero__cross hero__cross--top-right"></div>
+        <div class="hero__cross hero__cross--mid-right"></div>
+        <div class="hero__cross hero__cross--bot-left"></div>
+        <div class="hero__line"></div>
+      </div>
+
+      <!-- Слой 3: Камень слева с падающей тенью -->
+      <div class="hero__stone"></div>
+
+      <!-- Слой 4: Контент и интерфейс -->
+      <div class="hero__ui">
+        <div class="hero__center">
+          <img src="assets/images/logo-hero.png" alt="NICHEGO SMESHNOGO" class="hero__logo">
+          
+          <a href="#about" class="hero__btn">
+            <span>КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ // 2026</span>
+          </a>
+        </div>
+
+        <!-- Нижний служебный бар -->
+        <footer class="hero__footer">
+          <span class="hero__tag hero__tag--sistem">SISTEM</span>
+          <span class="hero__tag hero__tag--logo">LOGO</span>
+          <div class="hero__tag hero__tag--eng">
+            <img src="assets/images/barcode.png" alt="Barcode" class="hero__barcode">
+            <span>ENGINEERING</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <!-- ==================== /HERO SECTION ==================== -->
+
+    <!-- Секция карусели кейсов -->
+    <section class="section cases-section" id="cases" data-carousel>
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="section-badge">Портфолио</span>
+            <h2 class="section-title">Кейсы и проекты</h2>
+          </div>
+          
+          <div class="carousel-controls-group">
+            <!-- Точки пагинации (dots) из Figma -->
+            <div class="carousel-dots" data-carousel-dots>
+              <button class="carousel-dot active" data-index="0" aria-label="Слайд 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Слайд 2"></button>
+              <button class="carousel-dot" data-index="2" aria-label="Слайд 3"></button>
+              <button class="carousel-dot" data-index="3" aria-label="Слайд 4"></button>
+            </div>
+
+            <!-- Круглые кнопки со стрелками из Figma -->
+            <div class="carousel-controls">
+              <button class="control-btn" data-carousel-prev aria-label="Назад">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 18l-6-6 6-6"/>
+                </svg>
+              </button>
+              <button class="control-btn" data-carousel-next aria-label="Вперед">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" data-carousel-track>
+            
+            <!-- Слайд 1 -->
+            <article class="carousel-slide">
+              <div class="case-card">
+                <img src="assets/images/slide-1.png" alt="Кейс VZLET" class="case-card-image">
+                <div class="case-card-body">
+                  <span class="case-card-tag">3D & Графика</span>
+                  <h3 class="case-card-title">VZLET Project</h3>
+                </div>
+              </div>
+            </article>
+
+            <!-- Слайд 2 -->
+            <article class="carousel-slide">
+              <div class="case-card">
+                <img src="assets/images/slide-2.png" alt="Кейс Quote-Paragon" class="case-card-image">
+                <div class="case-card-body">
+                  <span class="case-card-tag">Брендинг</span>
+                  <h3 class="case-card-title">Quote-Paragon</h3>
+                </div>
+              </div>
+            </article>
+
+            <!-- Слайд 3 -->
+            <article class="carousel-slide">
+              <div class="case-card">
+                <img src="assets/images/slide-3.png" alt="Кейс Eleven Crypto" class="case-card-image">
+                <div class="case-card-body">
+                  <span class="case-card-tag">Crypto</span>
+                  <h3 class="case-card-title">Eleven Crypto</h3>
+                </div>
+              </div>
+            </article>
+
+            <!-- Слайд 4 -->
+            <article class="carousel-slide">
+              <div class="case-card">
+                <img src="assets/images/slide-4.png" alt="Кейс Дикая рыба" class="case-card-image">
+                <div class="case-card-body">
+                  <span class="case-card-tag">Айдентика</span>
+                  <h3 class="case-card-title">Wild Fish Cargo</h3>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Секция: О подходе -->
+    <section class="approach-section" id="about">
+      <div class="approach-container">
+        
+        <!-- Верхняя плашка -->
+        <div class="approach-header">
+          <div class="approach-header-icon">
+            <img src="assets/images/approach-icon.png" alt="Скульптура">
+          </div>
+          <h2 class="approach-header-title">О ПОДХОДЕ</h2>
+        </div>
+
+        <!-- Полотно: камень + текст + статуя -->
+        <div class="approach-canvas">
+          
+          <!-- Левая часть: чистый камень с наложенными карточками -->
+          <div class="approach-stone-side">
+            <div class="approach-cards-list">
+              <div class="approach-info-card">
+                <p class="card-head">Применяю образование скульптора:</p>
+                <p class="card-sub">отсекаю визуальный шум и выстраиваю формы.</p>
+              </div>
+
+              <div class="approach-info-card">
+                <p class="card-head">Собираю систему:</p>
+                <p class="card-sub">перевожу идеи в строгую графику, которая работает на статус бизнеса и не устаревает.</p>
+              </div>
+
+              <div class="approach-info-card">
+                <p class="card-head">Соблюдаю сроки и процессы:</p>
+                <p class="card-sub">работаю прозрачно, даю понятный план на старте и сдаю этапы без задержек.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правая часть: скульптура -->
+          <div class="approach-person-side">
+            <img src="assets/images/approach-statue.png" alt="Скульптура со сканером" class="approach-person-img">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

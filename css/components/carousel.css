@@ -1,0 +1,87 @@
+.carousel-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Точки */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot.active {
+  background-color: var(--color-accent);
+  transform: scale(1.2);
+}
+
+/* Кнопки перелистывания */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover,
+.control-btn:active,
+.control-btn.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #0d0d0e;
+}
+
+/* Лента слайдов */
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-block: 10px;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 calc((100% - 48px) / 3); /* Чтобы на экране помещались 3 крупные карточки с зазором */
+  min-width: 360px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}

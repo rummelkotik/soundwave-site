@@ -1,0 +1,9 @@
+@import './variables.css';
+@import './reset.css';
+@import './base.css';
+
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/card.css';
+@import './components/carousel.css';
+@import './components/approach.css';

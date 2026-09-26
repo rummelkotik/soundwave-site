@@ -1,0 +1,46 @@
+/* css/components/card.css */
+
+.case-card {
+  width: 100%;
+  background: var(--bg-surface, #141416);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.case-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* Пропорция превью карточки из макета */
+  object-fit: cover;
+  display: block;
+}
+
+.case-card-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-card-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent, #f5c518);
+  font-weight: 600;
+}
+
+.case-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}

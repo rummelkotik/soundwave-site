@@ -1,0 +1,26 @@
+:root {
+  /* Цвета макета */
+  --bg-main: #0b0b0c;
+  --bg-surface: #141416;
+  --bg-surface-elevated: #1e1e24;
+
+  --color-accent: #f5c518;
+  --color-accent-hover: #ffd700;
+
+  --text-primary: #ffffff;
+  --text-secondary: #9e9ea7;
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  /* Типографика и сетка */
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --container-width: 1520px; /* Было 1240px */
+  --container-padding: 32px; /* Было 20px */
+
+  /* Радиусы скруглений */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Анимации */
+  --transition: 0.25s ease;
+}
