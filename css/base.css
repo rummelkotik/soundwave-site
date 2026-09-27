@@ -1,3 +1,37 @@
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Холст, который масштабируется через transform */
+.site-scale-root {
+  width: 2560px !important;
+  min-width: 2560px !important;
+  max-width: 2560px !important;
+  position: relative;
+  transform-origin: top left;
+  display: block;
+  margin-bottom: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -11,7 +45,7 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -28,7 +62,7 @@
 
 .section-badge {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;

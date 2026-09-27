@@ -6,4 +6,11 @@
 @import './components/hero.css';
 @import './components/card.css';
 @import './components/carousel.css';
+@import './components/approach-banner.css';
 @import './components/approach.css';
+@import './components/process-banner.css';
+@import './components/process-steps.css';
+@import './components/showroom.css';
+@import './components/brands-banner.css';
+@import './components/brands.css';
+@import './components/contacts.css';

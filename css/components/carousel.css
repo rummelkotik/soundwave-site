@@ -1,7 +1,116 @@
+/* ==========================================================================
+   ШОУРУМ: СЕКЦИЯ КЕЙСОВ
+   ========================================================================== */
+
+.showroom-cases-section {
+  position: relative;
+  width: 100%;
+  background-color: #000000;
+  background-image: url('../../assets/images/process-steps-bg.png');
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% auto;
+  padding-block: 80px 140px;
+  box-sizing: border-box;
+}
+
+.showroom-cases-container {
+  width: 100%;
+  max-width: 1442px;
+  margin-inline: auto;
+  padding-inline: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  box-sizing: border-box;
+}
+
+/* Отдельный кейс */
+.case-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Верхний ряд: слайдер + инфо-карточка */
+.case-top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 880px 1fr;
+  gap: 24px;
+}
+
+/* Зеркальный порядок для кейсов 02 и 04 */
+.case-item--reversed .case-top {
+  grid-template-columns: 1fr 880px;
+}
+
+.case-item--reversed .case-top .carousel-wrapper {
+  order: 2;
+}
+
+.case-item--reversed .case-top .case-info-card {
+  order: 1;
+}
+
+/* ==========================================================================
+   КАРУСЕЛЬ (ТВОИ КЛАССЫ, АДАПТИРОВАННЫЕ ПОД СЛАЙДЕР В КЕЙСЕ)
+   ========================================================================== */
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(14, 16, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 0; /* Внутри окна слайды идут встык */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-block: 0;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ровно один кадр на 100% ширины */
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Панель управления снизу слайдера: точки по центру, кнопки справа */
 .carousel-controls-group {
+  position: absolute;
+  inset-inline: 32px;
+  bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: space-between;
+  z-index: 5;
+  pointer-events: none;
 }
 
 /* Точки */
@@ -9,6 +118,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  pointer-events: auto;
 }
 
 .carousel-dot {
@@ -27,8 +137,8 @@
 }
 
 .carousel-dot.active {
-  background-color: var(--color-accent);
-  transform: scale(1.2);
+  background-color: var(--color-accent, #fcee0a);
+  transform: scale(1.25);
 }
 
 /* Кнопки перелистывания */
@@ -36,52 +146,129 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  pointer-events: auto;
 }
 
 .control-btn {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  background: rgba(18, 20, 24, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
 .control-btn:hover,
-.control-btn:active,
-.control-btn.active {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+.control-btn:active {
+  background-color: var(--color-accent, #fcee0a);
+  border-color: var(--color-accent, #fcee0a);
   color: #0d0d0e;
+  transform: scale(1.06);
 }
 
-/* Лента слайдов */
-.carousel-track {
+/* ==========================================================================
+   ИНФО-КАРТОЧКА И ПЛАШКА ЗАДАЧИ
+   ========================================================================== */
+
+.case-info-card {
+  height: 380px;
+  border-radius: 24px;
+  padding: 44px 48px;
+  box-sizing: border-box;
   display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  padding-block: 10px;
-  scrollbar-width: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: rgba(18, 20, 24, 0.28);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
 }
 
-.carousel-track::-webkit-scrollbar {
-  display: none;
+.case-info-card__num {
+  font-family: var(--font-tech, 'Michroma'), sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-accent, #fcee0a);
+  margin-bottom: 24px;
 }
 
-.carousel-slide {
-  flex: 0 0 calc((100% - 48px) / 3); /* Чтобы на экране помещались 3 крупные карточки с зазором */
-  min-width: 360px;
+.case-info-card__title {
+  font-family: var(--font-tech, 'Michroma'), sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 16px 0;
 }
 
-.carousel-wrapper {
+.case-info-card__desc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #b0b4bc;
+  margin: 0;
+}
+
+.case-task-card {
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  border-radius: 24px;
+  padding: 36px 48px;
+  box-sizing: border-box;
+
+  background: rgba(18, 20, 24, 0.24);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.case-task-card__label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.case-task-card__text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #b0b4bc;
+  margin: 0;
+  max-width: 1100px;
+}
+
+/* Адаптив */
+@media (max-width: 1200px) {
+  .case-top,
+  .case-item--reversed .case-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .case-item--reversed .case-top .carousel-wrapper,
+  .case-item--reversed .case-top .case-info-card {
+    order: initial;
+  }
+  .carousel-wrapper,
+  .case-info-card {
+    height: 320px;
+  }
 }

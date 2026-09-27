@@ -1,0 +1,111 @@
+/* ==========================================================================
+   СЕКЦИЯ: ЭТАПЫ ПРОЦЕССА (ТОЧНЫЙ МАСШТАБ ИЗ FIGMA)
+   ========================================================================== */
+
+.process-steps-section {
+  position: relative;
+  width: 100%;
+  padding-block: 100px 160px;
+  background-color: var(--bg-main, #060607);
+  background-image: url('../../assets/images/process-steps-bg.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.process-steps-container {
+  max-width: 1440px; /* Фиксируем ширину под ширину макета в Figma */
+  margin-inline: auto;
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Строки: карточки стоят ближе к центру с небольшим перекрытием по вертикали */
+.process-step-row {
+  display: flex;
+  width: 100%;
+}
+
+.process-step-row--left {
+  justify-content: flex-start;
+}
+
+.process-step-row--right {
+  justify-content: flex-end;
+}
+
+/* Прозрачное затемнённое стекло с тонким контуром */
+.process-card {
+  width: 100%;
+  max-width: 740px;
+  min-height: 380px;
+  padding: 56px 64px;
+
+  /* Лёгкое тёмное тонирование вместо белой матовой заливки */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  
+  /* Снижаем радиус размытия до минимума, чтобы скала за стеклом была резкой и читаемой */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 36px;
+  
+  /* Тонкая стеклянная фаска */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.65),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 36px;
+  box-sizing: border-box;
+  transition: transform var(--transition, 0.25s ease), border-color var(--transition, 0.25s ease), box-shadow var(--transition, 0.25s ease);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(252, 238, 10, 0.5);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(252, 238, 10, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Огромная акцентная цифра */
+.process-card__number {
+  font-family: var(--font-tech, 'Michroma'), 'Orbitron', sans-serif;
+  font-size: 130px;           /* Мощный размер вровень с заголовком */
+  font-weight: 800;
+  line-height: 0.88;
+  color: var(--color-accent, #fcee0a);
+  letter-spacing: -0.03em;
+  user-select: none;
+}
+
+/* Крупный жирный заголовок и читаемый текст */
+.process-card__text {
+  font-family: var(--font-main);
+  font-size: 30px;            /* Увеличили в разы */
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.process-card__text strong {
+  color: #ffffff;
+  font-weight: 700;
+}

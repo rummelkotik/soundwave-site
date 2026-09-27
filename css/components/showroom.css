@@ -1,0 +1,93 @@
+/* ==========================================================================
+   СЕКЦИЯ: ШОУРУМ РАБОТ (БАННЕР В РАЗМЕР ПРЕДЫДУЩИХ)
+   ========================================================================== */
+
+.showroom-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+  background-color: #060607;
+  background-image: url('../../assets/images/showroom-banner-bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Растягиваем контейнер на всю базовую ширину сетки (как в первых секциях) */
+.showroom-banner-container {
+  width: 100%;
+  max-width: var(--container-width, 1520px);
+  margin-inline: auto;
+  padding-inline: var(--container-padding, 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Сама плашка на всю доступную ширину с высотой и скруглением как у верхних баннеров */
+.showroom-badge {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.20) 50%,
+    rgba(215, 225, 235, 0.14) 100%
+  );
+  backdrop-filter: blur(28px) saturate(130%);
+  -webkit-backdrop-filter: blur(28px) saturate(130%);
+  border-radius: var(--radius-badge, 26px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  padding-inline: 40px;
+}
+
+/* Точный размер шрифта и семейство как у "О ПОДХОДЕ" */
+.showroom-badge__title {
+  font-family: 'Michroma', sans-serif;
+  font-size: 110px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0b0c0e;
+  text-shadow: none;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Плавное уменьшение под экраны меньше 1500px, чтобы текст не вылезал за края */
+@media (max-width: 1520px) {
+  .showroom-badge {
+    height: 180px;
+  }
+  .showroom-badge__title {
+    font-size: clamp(42px, 8.5vw, 115px);
+  }
+}
+
+@media (max-width: 768px) {
+  .showroom-badge {
+    height: 110px;
+    border-radius: 18px;
+    padding-inline: 20px;
+  }
+  .showroom-badge__title {
+    font-size: clamp(26px, 6.5vw, 42px);
+    letter-spacing: 0.02em;
+  }
+}

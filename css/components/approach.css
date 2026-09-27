@@ -1,133 +1,136 @@
-/* css/components/approach.css */
+/* ==========================================================================
+   СЕКЦИЯ: О ПОДХОДЕ (ЭТАЛОН ПОД ХОЛСТ 2560px)
+   ========================================================================== */
 
 .approach-section {
-  width: 100%;
-  padding: 80px 0 120px;
-  background-color: transparent;
-  color: #ffffff;
+  width: 2560px;
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
 }
 
 .approach-container {
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Верхняя строка с заголовком */
-.approach-header {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  background: #0d0d0f;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 10px 24px;
-  margin-bottom: 24px;
-}
-
-.approach-header-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.approach-header-icon img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.approach-header-title {
+  width: 2560px;
   margin: 0;
-  color: #ffea00;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-/* Главный монолитный блок */
-.approach-canvas {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  min-height: 560px;
-  background: #08080a;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* Левая часть с чистым камнем */
-.approach-stone-side {
+  padding: 0;
   position: relative;
-  background-image: url('../../assets/images/approach-bg.png');
-  background-size: cover;
-  background-position: left center;
-  padding: 44px 36px;
+}
+
+/* Контентная область */
+.approach-content {
+  position: relative;
+  width: 2560px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.approach-inner {
+  position: relative;
+  width: 2560px;
+  height: 1370px;
   display: flex;
   align-items: center;
 }
 
-.approach-cards-list {
+/* 1. Левая колонка: скала */
+.approach-rock-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  height: 1370px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
+  align-items: center;
   z-index: 2;
 }
 
-/* Стеклянные карточки */
-.approach-info-card {
-  background: rgba(14, 15, 18, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 6px;
-  padding: 18px 24px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+.approach-rock-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 1;
+  pointer-events: none;
+
+  filter: 
+    drop-shadow(20px 0 25px rgba(0, 0, 0, 0.98))
+    drop-shadow(60px 0 50px rgba(0, 0, 0, 0.9))
+    drop-shadow(120px 0 90px rgba(0, 0, 0, 0.75));
 }
 
-.card-head {
-  margin: 0 0 6px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.card-sub {
-  margin: 0;
-  color: #9a9ba4;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-/* Правая часть со статуей */
-.approach-person-side {
+/* 2. Карточки поверх скалы */
+.approach-cards-list {
   position: relative;
+  z-index: 3;
+  width: 920px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 140px;
+}
+
+.approach-glass-card {
+  width: 920px;
+  height: 250px;
+  padding: 38px 46px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  background: #060608;
-  overflow: hidden;
+
+  background: rgba(18, 20, 24, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+.approach-card-title {
+  margin: 0 0 14px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.approach-card-text {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #d1d5db;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+/* 3. Правая колонка: скульптор */
+.approach-person-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1450px;
+  height: 1370px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .approach-person-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: right top;
   display: block;
-}
 
-@media (max-width: 900px) {
-  .approach-canvas {
-    grid-template-columns: 1fr;
-  }
-  
-  .approach-person-side {
-    height: 400px;
-  }
+  mask-image: radial-gradient(ellipse 85% 80% at 55% 45%, black 86%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 55% 45%, black 86%, transparent 100%);
 }

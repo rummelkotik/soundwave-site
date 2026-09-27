@@ -1,0 +1,321 @@
+/* ==========================================================================
+   DESKTOP RESPONSIVE (2560px -> 1920px -> 1600px -> 1366px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. БАЗОВАЯ ГЕОМЕТРИЯ ПЛАШЕК И ЕДИНЫЙ ТЕКСТ
+   -------------------------------------------------------------------------- */
+.approach-header-badge,
+.process-banner-badge,
+.showroom-badge,
+.brands-banner-badge,
+.contacts-badge {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+/* Центрирование абсолютно позиционированных плашек поверх картинок */
+.process-banner-badge,
+.brands-banner-badge,
+.showroom-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ЕДИНЫЙ КАРКАС ТИПОГРАФИКИ ДЛЯ ВСЕХ 5 ЗАГОЛОВКОВ */
+.approach-header-title,
+.process-banner-title,
+.showroom-badge__title,
+.brands-banner-title,
+.contacts-badge__title {
+  font-family: 'Michroma', sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   1. РОДНОЕ РАЗРЕШЕНИЕ (2560x1440 и выше)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1921px) {
+  .approach-header,
+  .process-banner-section,
+  .process-banner-container,
+  .brands-banner-section,
+  .brands-banner-container,
+  .showroom-banner {
+    height: 540px;
+  }
+
+  .approach-header-icon {
+    height: 540px;
+  }
+
+  /* Геометрия всех плашек */
+  .approach-header-badge,
+  .process-banner-badge,
+  .showroom-badge,
+  .brands-banner-badge,
+  .contacts-badge {
+    width: 74vw;
+    max-width: 1880px;
+    height: 200px;
+    border-radius: 26px;
+    padding: 0 40px;
+  }
+
+  /* СТРОГО ЕДИНЫЙ РАЗМЕР ТЕКСТА ВО ВСЕХ ПЛАШКАХ */
+  .approach-header-title,
+  .process-banner-title,
+  .showroom-badge__title,
+  .brands-banner-title,
+  .contacts-badge__title {
+    font-size: 76px !important;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. СТАНДАРТНЫЙ FULL HD (1601px - 1920px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1920px) {
+  .approach-header,
+  .process-banner-section,
+  .process-banner-container,
+  .brands-banner-section,
+  .brands-banner-container,
+  .showroom-banner {
+    height: 420px;
+  }
+
+  .approach-header-icon {
+    height: 420px;
+  }
+
+  .approach-header-badge,
+  .process-banner-badge,
+  .showroom-badge,
+  .brands-banner-badge,
+  .contacts-badge {
+    width: 78vw;
+    max-width: 1520px;
+    height: 150px;
+    border-radius: 22px;
+    padding: 0 32px;
+  }
+
+  /* СТРОГО ЕДИНЫЙ РАЗМЕР ТЕКСТА ВО ВСЕХ ПЛАШКАХ */
+  .approach-header-title,
+  .process-banner-title,
+  .showroom-badge__title,
+  .brands-banner-title,
+  .contacts-badge__title {
+    font-size: 56px !important;
+  }
+
+  /* Секция подхода */
+  .approach-inner {
+    height: 1050px;
+  }
+
+  .approach-rock-block {
+    width: 52vw;
+  }
+
+  .approach-glass-card {
+    height: 220px;
+    padding: 32px 40px;
+  }
+
+  .approach-card-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .approach-card-text {
+    font-size: 20px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. НОУТБУКИ 15-16 ДЮЙМОВ (1367px - 1600px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1600px) {
+  .approach-header,
+  .process-banner-section,
+  .process-banner-container,
+  .brands-banner-section,
+  .brands-banner-container,
+  .showroom-banner {
+    height: 330px;
+  }
+
+  .approach-header-icon {
+    height: 330px;
+  }
+
+  .approach-header-badge,
+  .process-banner-badge,
+  .showroom-badge,
+  .brands-banner-badge,
+  .contacts-badge {
+    width: 82vw;
+    max-width: 1280px;
+    height: 120px;
+    border-radius: 18px;
+    padding: 0 24px;
+  }
+
+  /* СТРОГО ЕДИНЫЙ РАЗМЕР ТЕКСТА ВО ВСЕХ ПЛАШКАХ */
+  .approach-header-title,
+  .process-banner-title,
+  .showroom-badge__title,
+  .brands-banner-title,
+  .contacts-badge__title {
+    font-size: 44px !important;
+  }
+
+  /* Секция подхода */
+  .approach-inner {
+    height: 900px;
+  }
+
+  .approach-rock-block {
+    width: 56vw;
+  }
+
+  .approach-cards-list {
+    gap: 20px;
+    padding-left: 40px;
+  }
+
+  .approach-glass-card {
+    height: 190px;
+    padding: 24px 32px;
+  }
+
+  .approach-card-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .approach-card-text {
+    font-size: 17px;
+  }
+
+  .approach-person-block {
+    margin-left: -280px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. КОМПАКТНЫЕ ЭКРАНЫ (до 1366px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1366px) {
+  .approach-header,
+  .process-banner-section,
+  .process-banner-container,
+  .brands-banner-section,
+  .brands-banner-container,
+  .showroom-banner {
+    height: 270px;
+  }
+
+  .approach-header-icon {
+    height: 270px;
+  }
+
+  .approach-header-badge,
+  .process-banner-badge,
+  .showroom-badge,
+  .brands-banner-badge,
+  .contacts-badge {
+    width: 86vw;
+    max-width: 1100px;
+    height: 100px;
+    border-radius: 16px;
+    padding: 0 20px;
+  }
+
+  /* СТРОГО ЕДИНЫЙ РАЗМЕР ТЕКСТА ВО ВСЕХ ПЛАШКАХ */
+  .approach-header-title,
+  .process-banner-title,
+  .showroom-badge__title,
+  .brands-banner-title,
+  .contacts-badge__title {
+    font-size: 34px !important;
+  }
+
+  /* Секция подхода */
+  .approach-inner {
+    height: 820px;
+  }
+
+  .approach-rock-block {
+    width: 58vw;
+  }
+
+  .approach-glass-card {
+    height: 170px;
+    padding: 18px 24px;
+  }
+
+  .approach-card-title {
+    font-size: 20px;
+  }
+
+  .approach-card-text {
+    font-size: 15px;
+  }
+
+  .approach-person-block {
+    margin-left: -200px;
+  }
+}
+
+/* ==========================================================================
+   5. ЭКРАНЫ ШИРЕ 2560px (4K / 3840px+)
+   Ограничиваем разъезжание контента и держим пропорции эталона
+   ========================================================================== */
+@media (min-width: 2561px) {
+  /* Ограничиваем контентную область подхода эталонной шириной */
+  .approach-inner {
+    max-width: 2560px !important;
+    margin: 0 auto !important;
+    height: 1370px !important;
+  }
+
+  /* Плашки не растягиваются бесконечно, а держат эталонный размер */
+  .approach-header-badge,
+  .process-banner-badge,
+  .showroom-badge,
+  .brands-banner-badge,
+  .contacts-badge {
+    max-width: 1880px !important;
+    width: 1880px !important;
+    height: 200px !important;
+  }
+
+  .approach-header-title,
+  .process-banner-title,
+  .showroom-badge__title,
+  .brands-banner-title,
+  .contacts-badge__title {
+    font-size: 76px !important;
+  }
+}
