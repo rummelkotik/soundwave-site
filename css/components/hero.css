@@ -35,7 +35,7 @@
   background-color: #070809;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url('../../assets/images/hero-leather.jpg');
+    url('../../assets/images/hero-leather.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -166,7 +166,7 @@
   left: 0;
   width: 50%; /* резервируем левую половину экрана без жестких рамок */
   height: 100%;
-  background-image: url('../../assets/images/hero-stone.png');
+  background-image: url('../../assets/images/hero-stone.webp');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 100%; /* строго от самого верха до низа */

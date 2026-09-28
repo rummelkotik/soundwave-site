@@ -27,7 +27,7 @@
     align-items: center !important;
     justify-content: center !important;
 
-    background-image: url('../../assets/images/showroom-banner-mobile.png') !important;
+    background-image: url('../../assets/images/showroom-banner-mobile.webp') !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -78,7 +78,7 @@
     /* Симметричный отступ сверху и снизу как над фургоном */
     padding: calc(24 * var(--m)) 0 calc(24 * var(--m)) 0 !important;
     background-color: #070809 !important;
-    background-image: url('../../assets/images/process-rock-mobile.png') !important;
+    background-image: url('../../assets/images/process-rock-mobile.webp') !important;
     background-size: 100% auto !important;
     background-position: top center !important;
     background-repeat: repeat-y !important;

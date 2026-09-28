@@ -44,7 +44,7 @@
     background-color: #070809 !important;
     background-image: 
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-      url('../../assets/images/hero-leather-mobile.jpg') !important;
+      url('../../assets/images/hero-leather-mobile.webp') !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -198,7 +198,7 @@
     width: 100% !important;
     height: calc(360 * var(--m)) !important;
     min-height: 0 !important;
-    background-image: url('../../assets/images/hero-stone-mobile.png') !important;
+    background-image: url('../../assets/images/hero-stone-mobile.webp') !important;
     background-repeat: no-repeat !important;
     background-position: top center !important;
     background-size: 100% auto !important;
