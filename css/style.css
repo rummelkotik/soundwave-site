@@ -30,3 +30,43 @@
 @import './mobile/brands-banner.css';
 @import './mobile/brands.css';
 @import './mobile/contacts.css';
+
+/* ==========================================================================
+   ОПТИМИЗАЦИЯ ПРОИЗВОДИТЕЛЬНОСТИ И GPU-РЕНДЕРА ДЛЯ МОБИЛОК
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* 1. Изоляция секций: браузер не перерисовывает всю страницу при скролле */
+  .approach-section,
+  .process-steps-section,
+  .showroom-banner-section,
+  .showroom-cases-section,
+  .brands-banner-section,
+  .brands-and-contacts {
+    contain: content;
+  }
+
+  /* 2. Облегчение размытия стекла: убираем просадки FPS на GPU */
+  .approach-glass-card,
+  .showroom-badge,
+  .brands-banner-mobile__badge,
+  .process-banner-mobile__badge {
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* 3. Отключение тяжелых фильтров теней */
+  .approach-rock-img,
+  .process-banner-bg,
+  .brands-banner-bg {
+    filter: none !important;
+  }
+
+  /* 4. Аппаратное ускорение скролла и каруселей */
+  .carousel-wrapper,
+  .carousel-track {
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+  }
+}
