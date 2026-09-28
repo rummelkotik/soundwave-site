@@ -6,7 +6,6 @@
     width: 100% !important;
     max-width: 100% !important;
     min-width: 100% !important;
-    /* Убираем любые отступы и фиксированную десктопную высоту */
     height: auto !important;
     min-height: 0 !important;
     margin: 0 !important;
@@ -20,9 +19,9 @@
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: 230px !important; /* Уменьшенная сбалансированная высота */
+    height: calc(230 * var(--m)) !important;
     margin: 0 !important;
-    padding: 0 40px !important;
+    padding: 0 calc(24 * var(--m)) !important;
     box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
@@ -35,33 +34,30 @@
     border-radius: 0 !important;
   }
 
-  /* Светлая полупрозрачная стеклянная плашка */
+  /* Светлая матовая плашка */
   .showroom-badge {
     position: relative !important;
     z-index: 2 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 74px !important;
+    width: calc(304 * var(--m)) !important;
+    max-width: 90% !important;
+    height: calc(72 * var(--m)) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
 
-    /* Светлый полупрозрачный фон и сильный блюр подложки */
-    background: rgba(255, 255, 255, 0.45) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    background: rgba(220, 222, 225, 0.75) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 
-    /* Тонкая светлая граница стекла и мягкая глубина */
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    border-radius: 18px !important;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    border-radius: calc(16 * var(--m)) !important;
+    box-shadow: 0 calc(8 * var(--m)) calc(24 * var(--m)) rgba(0, 0, 0, 0.2) !important;
   }
 
-  /* Черный контрастный текст */
   .showroom-badge__title {
     font-family: 'Orbitron', -apple-system, sans-serif !important;
-    font-size: 18px !important;
+    font-size: calc(18 * var(--m)) !important;
     font-weight: 700 !important;
     letter-spacing: 0.08em !important;
     line-height: 1 !important;
@@ -72,45 +68,47 @@
     margin: 0 !important;
   }
 
-  /* Секция с карточками кейсов — фон скалы на всю высоту */
+  /* Секция кейсов: чистый стильный монолит без рваной скалы */
   .showroom-cases-section {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: calc(30 * var(--m)) 0 calc(60 * var(--m)) !important;
+    padding: calc(24 * var(--m)) 0 calc(40 * var(--m)) !important;
     background-color: #070809 !important;
-    background-image: url('../../assets/images/approach-bg.png') !important;
-    background-size: 100% auto !important;
-    background-repeat: repeat-y !important;
-    background-position: top center !important;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+      url('../../assets/images/hero-leather-mobile.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     overflow: hidden !important;
     z-index: 5 !important;
-    transform: translateZ(0) !important;
   }
 
   .showroom-cases-container {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 calc(20 * var(--m)) !important;
+    padding: 0 calc(16 * var(--m)) !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: calc(40 * var(--m)) !important;
+    gap: calc(24 * var(--m)) !important;
   }
 
   .case-item {
     display: flex !important;
     flex-direction: column !important;
-    gap: calc(16 * var(--m)) !important;
+    gap: calc(12 * var(--m)) !important;
     width: 100% !important;
+    margin: 0 !important;
   }
 
   .case-top {
     display: flex !important;
     flex-direction: column !important;
-    gap: calc(16 * var(--m)) !important;
+    gap: calc(12 * var(--m)) !important;
     width: 100% !important;
   }
 }
