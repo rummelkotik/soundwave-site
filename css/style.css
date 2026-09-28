@@ -18,9 +18,7 @@
 
 /* МОБИЛЬНЫЕ КОМПОНЕНТЫ */
 @import './mobile/adaptive.css';
-@import './mobile/header.css';
 @import './mobile/hero.css';
-@import './mobile/card.css';
 @import './mobile/carousel.css';
 @import './mobile/approach-banner.css';
 @import './mobile/approach.css';
