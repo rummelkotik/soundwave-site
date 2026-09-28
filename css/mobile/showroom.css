@@ -67,14 +67,16 @@
     margin: 0 !important;
   }
 
-  /* Секция кейсов: фон сланца и стыковка в 0 снизу */
+  /* Секция кейсов: точная высота по контенту без пустот */
   .showroom-cases-section {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     margin: 0 !important;
-    margin-bottom: 0 !important;
-    padding: calc(24 * var(--m)) 0 0 0 !important; /* 0 снизу */
+    margin-bottom: -4px !important;
+    padding: calc(24 * var(--m)) 0 0 0 !important;
     background-color: #070809 !important;
     background-image: url('../../assets/images/process-rock-mobile.png') !important;
     background-size: 100% auto !important;
@@ -88,8 +90,11 @@
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 calc(16 * var(--m)) calc(16 * var(--m)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 calc(16 * var(--m)) 0 calc(16 * var(--m)) !important;
     margin: 0 !important;
+    margin-bottom: 0 !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
@@ -97,10 +102,13 @@
   }
 
   .case-item {
+    position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     gap: calc(12 * var(--m)) !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -110,5 +118,20 @@
     flex-direction: column !important;
     gap: calc(12 * var(--m)) !important;
     width: 100% !important;
+  }
+
+  /* Сброс отступов и высот карточки задачи и последнего кейса */
+  .case-task-card {
+    margin-bottom: 0 !important;
+  }
+
+  .case-item:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .case-item:last-child .case-task-card {
+    margin-bottom: 0 !important;
+    padding-bottom: calc(20 * var(--m)) !important;
   }
 }
