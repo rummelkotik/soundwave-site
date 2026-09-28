@@ -1,6 +1,12 @@
 /* css/mobile/process-banner.css */
 
 @media (max-width: 768px) {
+  /* 1. ЖЕСТКО СКРЫВАЕМ ДЕСКТОПНЫЙ ДУБЛЬ */
+  .process-banner-desktop {
+    display: none !important;
+  }
+
+  /* 2. СЕКЦИЯ БАННЕРА */
   .process-banner-section {
     position: relative !important;
     width: 100% !important;
@@ -8,10 +14,10 @@
     height: auto !important;
     min-height: 0 !important;
     margin: 0 !important;
-    padding: calc(30 * var(--m)) calc(16 * var(--m)) !important;
+    padding: calc(18 * var(--m)) calc(16 * var(--m)) !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
     background-color: #070809 !important;
+    overflow: hidden !important;
   }
 
   .process-banner-container {
@@ -22,13 +28,24 @@
     min-height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  /* 3. МОБИЛЬНЫЙ БАННЕР */
+  .process-banner-mobile {
+    position: relative !important;
+    width: 100% !important;
+    height: calc(110 * var(--m)) !important;
+    min-height: calc(110 * var(--m)) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    border-radius: calc(16 * var(--m)) !important;
+    overflow: hidden !important;
+    background: #000000 !important;
   }
 
-  /* Фоновая анатомическая текстура */
-  .process-banner-bg {
+  /* Анатомический фон */
+  .process-banner-mobile__bg {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -36,43 +53,49 @@
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    opacity: 0.25 !important;
+    opacity: 0.35 !important;
     pointer-events: none !important;
     z-index: 1 !important;
   }
 
-  /* Стеклянная плашка бейджа */
-  .process-banner-badge,
+  .process-banner-mobile__vignette {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 30%, rgba(7, 8, 9, 0.8) 100%) !important;
+    z-index: 2 !important;
+  }
+
+  /* 4. КАПСУЛА-БЕЙДЖ */
   .process-banner-mobile__badge {
     position: relative !important;
-    z-index: 2 !important;
+    z-index: 3 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: auto !important;
-    max-width: 90% !important;
-    padding: calc(14 * var(--m)) calc(24 * var(--m)) !important;
+    max-width: calc(100% - 32px) !important;
+    padding: calc(10 * var(--m)) calc(18 * var(--m)) !important;
     box-sizing: border-box !important;
-    
-    background: rgba(255, 255, 255, 0.12) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+    background: rgba(18, 20, 24, 0.55) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.28) !important;
     border-radius: calc(30 * var(--m)) !important;
-    box-shadow: 0 calc(8 * var(--m)) calc(24 * var(--m)) rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 calc(6 * var(--m)) calc(20 * var(--m)) rgba(0, 0, 0, 0.5) !important;
   }
 
-  /* Заголовок внутри плашки: уменьшаем размер и трекинг, чтобы помещался с запасом */
-  .process-banner-title,
-  .process-banner-badge__title,
+  /* Текст: идеальный размер под капсулу */
   .process-banner-mobile__title {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-size: calc(15 * var(--m)) !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    letter-spacing: 0.04em !important;
+    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: calc(12.5 * var(--m)) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    color: #0d0f12 !important;
+    color: #ffffff !important;
     white-space: nowrap !important;
     text-align: center !important;
     margin: 0 !important;
