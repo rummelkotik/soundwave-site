@@ -1,0 +1,184 @@
+/* ==========================================================================
+   МОБИЛЬНАЯ КАРУСЕЛЬ КЕЙСОВ ПО МАКЕТУ FIGMA (СВАЙП)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Общая секция и контейнер */
+  .showroom-cases-section,
+  .carousel-section {
+    padding-block: 24px 48px !important;
+    background: transparent !important;
+  }
+
+  .showroom-cases-container,
+  .carousel-container {
+    width: 100% !important;
+    padding-inline: 20px !important; /* Отступы от краев экрана */
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important; /* Расстояние между кейсами */
+  }
+
+  /* Карточка кейса целиком */
+  .case-item {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important; /* Зазор между слайдером и описанием */
+  }
+
+  /* Сброс десктопной сетки и реверса в одну вертикальную колонку */
+  .case-top,
+  .case-item--reversed .case-top {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .case-item--reversed .case-top .carousel-wrapper {
+    order: 1 !important;
+  }
+
+  .case-item--reversed .case-top .case-info-card {
+    order: 2 !important;
+  }
+
+  /* 1. Блок слайдера с картинкой */
+  .carousel-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: 205px !important; /* Пропорция кадра из макета */
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #0d0e12 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Нативный горизонтальный свайп с привязкой */
+  .carousel-track {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important; /* Убирает полосу прокрутки в Firefox */
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none !important; /* Убирает полосу прокрутки в Chrome / Safari */
+  }
+
+  .carousel-slide {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+  }
+
+  .carousel-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    pointer-events: none !important; /* Защита от перетаскивания картинки браузером */
+  }
+
+  /* Навигация слайдера */
+  .carousel-controls-group {
+    position: absolute !important;
+    inset-inline: 0 !important;
+    bottom: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+  }
+
+  /* Точки строго по центру */
+  .carousel-dots {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .carousel-dot {
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.35) !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+
+  .carousel-dot.active {
+    background-color: #fcee0a !important;
+  }
+
+  /* Скрываем кнопки со стрелками на мобилке */
+  .carousel-controls,
+  .control-btn {
+    display: none !important;
+  }
+
+  /* 2. Текстовая плашка под картинкой */
+  .case-info-card {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box !important;
+
+    background: rgba(14, 16, 20, 0.55) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+
+    border-radius: 18px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* Заголовок проекта */
+  .case-info-card__title {
+    font-family: 'HS_LunaObscura', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  /* Описание под заголовком */
+  .case-info-card__desc {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 19.5px !important;
+    line-height: 1.45 !important;
+    color: #9ea3ae !important;
+    margin: 0 !important;
+  }
+
+  /* 3. Полное скрытие лишних десктопных элементов */
+  .case-info-card__num,
+  .case-task-card,
+  .case-task,
+  [class*="case-task"],
+  [class*="task-card"] {
+    display: none !important;
+  }
+}

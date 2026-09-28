@@ -1,0 +1,348 @@
+/* ==========================================================================
+   ПОДКЛЮЧЕНИЕ КАСТОМНОГО ШРИФТА (HS_LunaObscura)
+   ========================================================================== */
+@font-face {
+  font-family: 'HS_LunaObscura';
+  src: url('../../assets/fonts/HS_LunaObscura.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   MOBILE HERO (<= 768px) — ПОЛНОСТЬЮ ДИНАМИЧЕСКИЙ ЧЕРЕЗ --m
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Сброс базового холста под экран смартфона */
+  .site-scale-root {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 1. Главный экран Hero: масштаб ровно под артборд макета */
+  .hero {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: calc(874 * var(--m)) !important;
+    min-height: calc(874 * var(--m)) !important;
+    max-height: calc(874 * var(--m)) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #060607 !important;
+  }
+
+  /* Фоновый слой кожи */
+  .hero__bg {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background-color: #070809 !important;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url('../../assets/images/hero-leather-mobile.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    filter: contrast(160%) brightness(0.7) !important;
+  }
+
+  /* 2. СЕТКА (z-index: 2) — 4 колонки строго пропорционально экрану */
+  .hero__grid-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+  }
+
+  .hero__grid-canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px) !important;
+    background-size: 
+      calc((100% - (64 * var(--m))) / 4) 100%,
+      100% calc(86 * var(--m)) !important;
+    background-position: 
+      calc(32 * var(--m)) 0, 
+      0 calc(28 * var(--m)) !important;
+    background-repeat: repeat-x, repeat-y !important;
+  }
+
+  /* Правая вертикальная замыкающая линия */
+  .hero__grid-canvas::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: calc(32 * var(--m)) !important;
+    width: 1px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* 3. ЗАСЕЧКИ ПО СЕТКЕ */
+
+  /* Верхний крестик — опущен пропорционально логотипу */
+  .hero__cross--top-right {
+    position: absolute !important;
+    top: calc(348 * var(--m)) !important;
+    left: calc(32 * var(--m) + (100% - (64 * var(--m))) / 4) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) scale(1.25) !important;
+    width: calc(20 * var(--m)) !important;
+    height: calc(20 * var(--m)) !important;
+    display: block !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: 4 !important;
+  }
+
+  .hero__cross--top-right::before,
+  .hero__cross--top-right::after {
+    content: '' !important;
+    position: absolute !important;
+    background-color: rgba(229, 255, 0, 0.35) !important;
+  }
+
+  .hero__cross--top-right::before {
+    top: calc(10 * var(--m)) !important;
+    left: 0 !important;
+    width: calc(20 * var(--m)) !important;
+    height: 1px !important;
+  }
+
+  .hero__cross--top-right::after {
+    top: 0 !important;
+    left: calc(10 * var(--m)) !important;
+    width: 1px !important;
+    height: calc(20 * var(--m)) !important;
+  }
+
+  /* Желтая засечка справа */
+  .hero__cross--mid-right {
+    display: block !important;
+    position: absolute !important;
+    top: calc(716 * var(--m)) !important;
+    right: 0 !important;
+    left: auto !important;
+    width: calc(32 * var(--m)) !important;
+    height: 1px !important;
+    transform: none !important;
+    background-color: #fcee0a !important;
+    box-shadow: 0 0 calc(10 * var(--m)) rgba(252, 238, 10, 0.75) !important;
+    z-index: 4 !important;
+  }
+
+  .hero__cross--mid-right::before,
+  .hero__cross--mid-right::after {
+    display: none !important;
+  }
+
+  /* Нижний крестик */
+  .hero__cross--bot-left {
+    position: absolute !important;
+    top: calc(803 * var(--m)) !important;
+    left: calc(50% + 1px) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) scale(1.25) !important;
+    width: calc(22 * var(--m)) !important;
+    height: calc(22 * var(--m)) !important;
+    display: block !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: 4 !important;
+  }
+
+  .hero__cross--bot-left::before,
+  .hero__cross--bot-left::after {
+    content: '' !important;
+    position: absolute !important;
+    background-color: #fcee0a !important;
+    box-shadow: 0 0 calc(6 * var(--m)) rgba(252, 238, 10, 0.5) !important;
+  }
+
+  .hero__cross--bot-left::before {
+    top: calc(10 * var(--m)) !important;
+    left: 0 !important;
+    width: calc(22 * var(--m)) !important;
+    height: 1px !important;
+  }
+
+  .hero__cross--bot-left::after {
+    top: 0 !important;
+    left: calc(10 * var(--m)) !important;
+    width: 1px !important;
+    height: calc(22 * var(--m)) !important;
+  }
+
+  /* 4. СКАЛА ВВЕРХУ — полный показ без обрезки нижних сколов */
+  .hero__stone {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: calc(360 * var(--m)) !important;
+    min-height: 0 !important;
+    background-image: url('../../assets/images/hero-stone-mobile.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: 100% auto !important;
+    z-index: 3 !important;
+    pointer-events: none !important;
+    filter: drop-shadow(0 calc(12 * var(--m)) calc(22 * var(--m)) rgba(0, 0, 0, 0.9)) !important;
+  }
+
+  /* 5. КОНТЕНТ (z-index: 5) — логотип и плашка опущены ниже */
+  .hero__ui {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+  }
+
+  .hero__center {
+    position: absolute !important;
+    top: calc(365 * var(--m)) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(340 * var(--m)) !important;
+    max-width: 90% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: calc(28 * var(--m)) !important;
+  }
+
+  .hero__logo {
+    width: calc(310 * var(--m)) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Кнопка «КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ» */
+  .hero__btn {
+    width: 100% !important;
+    max-width: calc(340 * var(--m)) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: calc(20 * var(--m)) calc(22 * var(--m)) !important;
+    border-radius: calc(16 * var(--m)) !important;
+    background: linear-gradient(
+      180deg, 
+      rgba(35, 38, 44, 0.92) 0%, 
+      rgba(12, 14, 18, 0.96) 100%
+    ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 
+      0 calc(18 * var(--m)) calc(42 * var(--m)) rgba(0, 0, 0, 0.95),
+      inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: calc(6 * var(--m)) !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero__btn .hero__btn-line,
+  .hero__btn span {
+    font-family: 'HS_LunaObscura', sans-serif !important;
+    font-size: calc(14.5 * var(--m)) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.06em !important;
+    color: #fcee0a !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  /* 6. СЛУЖЕБНЫЙ ФУТЕР — строго по ячейкам сетки */
+  .hero__footer {
+    position: absolute !important;
+    left: calc(32 * var(--m)) !important;
+    right: calc(32 * var(--m)) !important;
+    bottom: calc(28 * var(--m)) !important;
+    width: calc(100% - (64 * var(--m))) !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    align-items: baseline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    box-sizing: border-box !important;
+    z-index: 5 !important;
+  }
+
+  .hero__tag {
+    font-family: 'HS_LunaObscura', sans-serif !important;
+    font-size: calc(7.5 * var(--m)) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.08em !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    text-transform: uppercase !important;
+    line-height: 1 !important;
+    justify-self: start !important;
+    padding-left: calc(6 * var(--m)) !important;
+    margin: 0 !important;
+    background: transparent !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero__tag--sistem {
+    grid-column: 1 !important;
+    transform: translate(calc(-40 * var(--m)), calc(-50 * var(--m))) !important;
+  }
+
+  .hero__tag--logo {
+    grid-column: 2 !important;
+    transform: translate(calc(-16 * var(--m)), calc(-50 * var(--m))) !important;
+  }
+
+  .hero__tag--eng {
+    grid-column: 3 !important;
+    transform: translate(calc(10 * var(--m)), calc(20 * var(--m))) !important;
+  }
+
+  /* Штрихкод: вертикально в правом отступе */
+  .hero__barcode {
+    display: block !important;
+    position: absolute !important;
+    bottom: calc(54 * var(--m)) !important;
+    right: calc(-30 * var(--m)) !important;
+    width: calc(100 * var(--m)) !important;
+    height: auto !important;
+    transform-origin: center center !important;
+    transform: rotate(-90deg) !important;
+    opacity: 0.6 !important;
+    filter: invert(1) !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+  }
+}

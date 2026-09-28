@@ -2,6 +2,13 @@
    БАННЕР: ОПЫТ РАБОТЫ С БРЕНДАМИ (ЭТАЛОН 2560px)
    ========================================================================== */
 
+/* Скрываем мобильную версию на десктопе */
+@media (min-width: 769px) {
+  .brands-banner-mobile {
+    display: none !important;
+  }
+}
+
 .brands-banner-section {
   width: 2560px;
   height: 540px;
@@ -14,6 +21,18 @@
   width: 2560px;
   height: 540px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Обертка десктопного баннера — растянута на весь контейнер по центру */
+.brands-banner-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2560px;
+  height: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,12 +63,13 @@
   background: radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.75) 100%);
 }
 
-/* Плашка — светлое матовое стекло как в Шоуруме */
+/* Плашка — строго по центру баннера */
 .brands-banner-badge {
   position: relative;
   z-index: 3;
   width: 1880px;
   height: 200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,14 +92,15 @@
     inset 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
-/* Заголовок — черный, тонкий, крупный */
+/* Заголовок — выровнен по центру в 1 строку */
 .brands-banner-title {
   font-family: 'Michroma', sans-serif;
-  font-size: 110px;
+  font-size: 78px;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-align: center;
   color: #0b0c0e;
   text-shadow: none;
   margin: 0;

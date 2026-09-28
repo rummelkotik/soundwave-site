@@ -1,0 +1,102 @@
+/* css/mobile/process-steps.css */
+
+@media (min-width: 769px) {
+  .process-step-row--mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Схлопываем десктопную высоту 540px у баннера, убирая огромный черный провал */
+  .process-banner-section,
+  .process-banner-container {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  .process-steps-section {
+    position: relative !important;
+    z-index: 12 !important;
+    width: 100% !important;
+    background-image: url('../../assets/images/process-rock-mobile.png') !important;
+    background-repeat: repeat-y !important;
+    background-position: center top !important;
+    background-size: 100% auto !important;
+    margin-top: 0 !important;
+    padding: 40px 40px 60px !important;
+    box-sizing: border-box !important;
+  }
+
+  .process-steps-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .process-step-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  /* Плашки: ширина и высота минус 80px (по 40px отступы с боков) */
+  .process-card {
+    width: calc(100vw - 80px) !important;
+    max-width: calc(100vw - 80px) !important;
+    height: calc(100vw - 80px) !important;
+    margin: 0 auto !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+
+    background: rgba(14, 16, 20, 0.48) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    overflow: hidden !important;
+  }
+
+  /* Цифры */
+  .process-card__number {
+    font-family: 'Orbitron', -apple-system, sans-serif !important;
+    font-size: 57px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1 !important;
+    color: #ffcc00 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* Текст */
+  .process-card__text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.01em !important;
+    color: #c4c9d4 !important;
+    margin: 0 !important;
+  }
+
+  .process-card__text strong {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+}

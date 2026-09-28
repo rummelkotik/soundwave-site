@@ -4,26 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NICHEGO SMESHNOGO — Brand Design</title>
-  
+
   <!-- Подключение шрифтов Orbitron и Michroma из макета -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  
+
+  <!-- Единая точка входа для всех десктопных и мобильных стилей -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ==================== КОРНЕВОЙ ХОЛСТ МАСШТАБИРОВАНИЯ ==================== -->
+  <!-- Корневой холст масштабирования -->
   <div class="site-scale-root">
 
     <main>
-      <!-- ==================== HERO SECTION ==================== -->
+
+      <!-- Hero -->
       <section class="hero" id="hero">
         <div class="hero__bg"></div>
 
         <div class="hero__grid-wrapper">
           <div class="hero__grid-canvas"></div>
+
           <span class="hero__cross hero__cross--top-right"></span>
           <span class="hero__cross hero__cross--mid-right"></span>
           <span class="hero__cross hero__cross--bot-left"></span>
@@ -33,49 +36,81 @@
 
         <div class="hero__ui">
           <div class="hero__center">
-            <img src="assets/images/logo-hero.png" alt="NICHEGO SMESHNOGO" class="hero__logo">
-            
+            <img
+              src="assets/images/logo-hero.png"
+              alt="NICHEGO SMESHNOGO"
+              class="hero__logo"
+            >
+
             <a href="#about" class="hero__btn">
-              <span>КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ // 2026</span>
+              <span class="hero__btn-line hero__btn-line--accent">КОММЕРЧЕСКОЕ</span>
+              <span class="hero__btn-line hero__btn-line--light">ПРЕДЛОЖЕНИЕ // 2026</span>
             </a>
           </div>
 
-          <img src="assets/images/barcode.png" alt="Barcode" class="hero__barcode">
+          <img
+            src="assets/images/barcode.png"
+            alt=""
+            aria-hidden="true"
+            class="hero__barcode"
+          >
 
-          <footer class="hero__footer">
+          <div class="hero__footer">
             <span class="hero__tag hero__tag--sistem">SISTEM</span>
             <span class="hero__tag hero__tag--logo">LOGO</span>
             <span class="hero__tag hero__tag--eng">ENGINEERING</span>
-          </footer>
+          </div>
         </div>
       </section>
-      <!-- ==================== /HERO SECTION ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: О ПОДХОДЕ ==================== -->
+      <!-- О подходе -->
       <section class="approach-section" id="about">
         <div class="approach-container">
-          
-          <!-- Верхняя плашка со статуей слева -->
-          <div class="approach-header">
+
+          <!-- 1. ДЕСКТОПНЫЙ БАННЕР -->
+          <div class="approach-header approach-banner-desktop">
             <div class="approach-header-icon">
-              <img src="assets/images/approach-icon.png" alt="Статуя">
+              <img
+                src="assets/images/approach-icon.png"
+                alt="О подходе"
+              >
             </div>
+
             <div class="approach-header-badge">
               <h2 class="approach-header-title">О ПОДХОДЕ</h2>
             </div>
           </div>
 
-          <!-- Контентная область -->
+          <!-- 2. МОБИЛЬНЫЙ БАННЕР -->
+          <div class="approach-banner-mobile">
+            <img
+              src="assets/images/approach-banner-bg.png"
+              alt="О подходе"
+              class="approach-banner-mobile__img"
+            >
+            <div class="approach-banner-mobile__badge">
+              <h2 class="approach-banner-mobile__title">О ПОДХОДЕ</h2>
+            </div>
+          </div>
+
           <div class="approach-content">
             <div class="approach-inner">
-              
-              <!-- Левая колонка: скала-подложка и карточки -->
+
               <div class="approach-rock-block">
-                <img src="assets/images/approach-bg.png" alt="" class="approach-rock-img" aria-hidden="true">
+                <img
+                  src="assets/images/approach-bg.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="approach-rock-img"
+                >
 
                 <div class="approach-cards-list">
+
                   <div class="approach-glass-card">
-                    <h4 class="approach-card-title">Применяю образование скульптора:</h4>
+                    <h3 class="approach-card-title">
+                      Применяю образование скульптора:
+                    </h3>
+
                     <p class="approach-card-text">
                       отсекаю визуальный шум<br>
                       и выстраиваю формы.
@@ -83,28 +118,38 @@
                   </div>
 
                   <div class="approach-glass-card">
-                    <h4 class="approach-card-title">Собираю систему:</h4>
+                    <h3 class="approach-card-title">
+                      Собираю систему:
+                    </h3>
+
                     <p class="approach-card-text">
-                      перевожу идеи в строгую графику,<br>
+                      переводя идеи в строгую графику,<br>
                       которая работает на статус бизнеса<br>
                       и не устаревает.
                     </p>
                   </div>
 
                   <div class="approach-glass-card">
-                    <h4 class="approach-card-title">Соблюдаю сроки и процессы:</h4>
+                    <h3 class="approach-card-title">
+                      Соблюдаю сроки и процессы:
+                    </h3>
+
                     <p class="approach-card-text">
                       работаю прозрачно, даю понятный<br>
                       план на старте и сдаю этапы<br>
                       без задержек.
                     </p>
                   </div>
+
                 </div>
               </div>
 
-              <!-- Правая колонка: скульптор с желтыми точками -->
               <div class="approach-person-block">
-                <img src="assets/images/approach-statue.png" alt="Скульптор с разметкой" class="approach-person-img">
+                <img
+                  src="assets/images/approach-statue.png"
+                  alt="Скульптор с разметкой"
+                  class="approach-person-img"
+                >
               </div>
 
             </div>
@@ -112,30 +157,61 @@
 
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: О ПОДХОДЕ ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: БАННЕР С АНАТОМИЕЙ ==================== -->
+      <!-- Баннер: Как устроен процесс -->
       <section class="process-banner-section">
         <div class="process-banner-container">
-          <img src="assets/images/process-anatomy-bg.png" alt="Анатомические эскизы" class="process-banner-bg">
-          <div class="process-banner-vignette"></div>
 
-          <div class="process-banner-badge">
-            <h2 class="process-banner-title">КАК УСТРОЕН ПРОЦЕСС</h2>
+          <!-- 1. ДЕСКТОПНЫЙ БАННЕР -->
+          <div class="process-banner-desktop">
+            <img
+              src="assets/images/process-anatomy-bg.png"
+              alt=""
+              aria-hidden="true"
+              class="process-banner-bg"
+            >
+
+            <div class="process-banner-vignette"></div>
+
+            <div class="process-banner-badge">
+              <h2 class="process-banner-title">
+                КАК УСТРОЕН ПРОЦЕСС
+              </h2>
+            </div>
           </div>
+
+          <!-- 2. МОБИЛЬНЫЙ БАННЕР -->
+          <div class="process-banner-mobile">
+            <img
+              src="assets/images/process-anatomy-bg.png"
+              alt="Как устроен процесс"
+              class="process-banner-mobile__bg"
+            >
+
+            <div class="process-banner-mobile__vignette"></div>
+
+            <div class="process-banner-mobile__badge">
+              <h2 class="process-banner-mobile__title">
+                КАК УСТРОЕН ПРОЦЕСС
+              </h2>
+            </div>
+          </div>
+
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: БАННЕР С АНАТОМИЕЙ ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: ЭТАПЫ ПРОЦЕССА (01-05) ==================== -->
+      <!-- Этапы процесса -->
       <section class="process-steps-section" id="process">
         <div class="process-steps-container">
 
           <div class="process-step-row process-step-row--left">
             <div class="process-card">
               <span class="process-card__number">01</span>
+
               <p class="process-card__text">
-                <strong>Созвон и бриф.</strong> Разбираем ваш продукт, цели бизнеса и то, как вас должен воспринимать клиент.
+                <strong>Созвон и бриф.</strong>
+                Разбираем ваш продукт, цели бизнеса и то,
+                как вас должен воспринимать клиент.
               </p>
             </div>
           </div>
@@ -143,8 +219,11 @@
           <div class="process-step-row process-step-row--right">
             <div class="process-card">
               <span class="process-card__number">02</span>
+
               <p class="process-card__text">
-                <strong>Анализ рынка.</strong> Изучаем визуальный язык конкурентов, чтобы понять, как сделать вас заметнее.
+                <strong>Анализ рынка.</strong>
+                Изучаем визуальный язык конкурентов,
+                чтобы понять, как сделать вас заметнее.
               </p>
             </div>
           </div>
@@ -152,8 +231,11 @@
           <div class="process-step-row process-step-row--left">
             <div class="process-card">
               <span class="process-card__number">03</span>
+
               <p class="process-card__text">
-                <strong>Дизайн.</strong> Проектируем логотип, подбираем шрифтовую пару и рабочую палитру цветов.
+                <strong>Дизайн.</strong>
+                Проектируем логотип, подбираем шрифтовую пару
+                и рабочую палитру цветов.
               </p>
             </div>
           </div>
@@ -161,8 +243,11 @@
           <div class="process-step-row process-step-row--right">
             <div class="process-card">
               <span class="process-card__number">04</span>
+
               <p class="process-card__text">
-                <strong>Носители.</strong> Переносим готовый стиль на реальные задачи: соцсети, полиграфию или упаковку.
+                <strong>Носители.</strong>
+                Переносим готовый стиль на реальные задачи:
+                соцсети, полиграфию или упаковку.
               </p>
             </div>
           </div>
@@ -170,273 +255,598 @@
           <div class="process-step-row process-step-row--left">
             <div class="process-card">
               <span class="process-card__number">05</span>
+
               <p class="process-card__text">
-                <strong>Сдача.</strong> Передаю исходники и понятное руководство, чтобы стиль не ломался при дальнейшей работе.
+                <strong>Сдача.</strong>
+                Передаю исходники и понятное руководство,
+                чтобы стиль не ломался при дальнейшей работе.
               </p>
             </div>
           </div>
 
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: ЭТАПЫ ПРОЦЕССА ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: ШОУРУМ РАБОТ (БАННЕР) ==================== -->
+      <!-- Шоурум работ -->
       <section class="showroom-banner-section" id="showroom">
         <div class="showroom-banner-container">
           <div class="showroom-badge">
-            <h2 class="showroom-badge__title">ШОУРУМ РАБОТ</h2>
+            <h2 class="showroom-badge__title">
+              ШОУРУМ РАБОТ
+            </h2>
           </div>
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: ШОУРУМ РАБОТ ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: КЕЙСЫ ШОУРУМА ==================== -->
+      <!-- Кейсы -->
       <section class="showroom-cases-section">
         <div class="showroom-cases-container">
 
-          <!-- КЕЙС 01 -->
+          <!-- Кейс 01 -->
           <article class="case-item">
             <div class="case-top">
+
               <div class="carousel-wrapper" data-carousel>
                 <div class="carousel-track" data-carousel-track>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-1.png" alt="Дикая рыба 1">
+                    <img
+                      src="assets/images/slide-1.png"
+                      alt="Айдентика бренда «Дикая рыба»"
+                    >
                   </div>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-1.png" alt="Дикая рыба 2">
+                    <img
+                      src="assets/images/slide-1.png"
+                      alt="Айдентика бренда «Дикая рыба», слайд 2"
+                    >
                   </div>
+
                 </div>
+
                 <div class="carousel-controls-group">
+
                   <div class="carousel-dots">
-                    <button type="button" class="carousel-dot active"></button>
-                    <button type="button" class="carousel-dot"></button>
+                    <button
+                      type="button"
+                      class="carousel-dot active"
+                      aria-label="Слайд 1"
+                      aria-current="true"
+                    ></button>
+
+                    <button
+                      type="button"
+                      class="carousel-dot"
+                      aria-label="Слайд 2"
+                      aria-current="false"
+                    ></button>
                   </div>
+
                   <div class="carousel-controls">
-                    <button type="button" class="control-btn" data-carousel-prev aria-label="Назад">&lt;</button>
-                    <button type="button" class="control-btn" data-carousel-next aria-label="Вперед">&gt;</button>
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-prev
+                      aria-label="Назад"
+                    >&lt;</button>
+
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-next
+                      aria-label="Вперед"
+                    >&gt;</button>
                   </div>
+
                 </div>
               </div>
 
-              <div class="case-info-card">
+              <header class="case-info-card">
                 <span class="case-info-card__num">01</span>
                 <h3 class="case-info-card__title">ДИКАЯ РЫБА</h3>
-                <p class="case-info-card__desc">Производство<br>и дистрибуция<br>рыбной продукции.</p>
-              </div>
+
+                <p class="case-info-card__desc">
+                  Производство<br>
+                  и дистрибуция<br>
+                  рыбной продукции.
+                </p>
+              </header>
+
             </div>
 
             <div class="case-task-card">
-              <h4 class="case-task-card__label">Задача:</h4>
+              <span class="case-task-card__label">Задача:</span>
+
               <p class="case-task-card__text">
-                Разработать монолитную айдентику для рыбопромышленного бренда, способную одинаково строго работать от упаковки премиальной консервации до крупногабаритной логистики.
+                Разработать монолитную айдентику для рыбопромышленного бренда,
+                способную одинаково строго работать от упаковки премиальной
+                консервации до крупногабаритной логистики.
               </p>
             </div>
           </article>
 
-          <!-- КЕЙС 02 (Зеркальный) -->
+          <!-- Кейс 02 -->
           <article class="case-item case-item--reversed">
             <div class="case-top">
+
               <div class="carousel-wrapper" data-carousel>
                 <div class="carousel-track" data-carousel-track>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-2.png" alt="Eleven Crypto 1">
+                    <img
+                      src="assets/images/slide-2.png"
+                      alt="Айдентика бренда Eleven Crypto"
+                    >
                   </div>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-2.png" alt="Eleven Crypto 2">
+                    <img
+                      src="assets/images/slide-2.png"
+                      alt="Айдентика бренда Eleven Crypto, слайд 2"
+                    >
                   </div>
+
                 </div>
+
                 <div class="carousel-controls-group">
+
                   <div class="carousel-dots">
-                    <button type="button" class="carousel-dot active"></button>
-                    <button type="button" class="carousel-dot"></button>
+                    <button
+                      type="button"
+                      class="carousel-dot active"
+                      aria-label="Слайд 1"
+                      aria-current="true"
+                    ></button>
+
+                    <button
+                      type="button"
+                      class="carousel-dot"
+                      aria-label="Слайд 2"
+                      aria-current="false"
+                    ></button>
                   </div>
+
                   <div class="carousel-controls">
-                    <button type="button" class="control-btn" data-carousel-prev aria-label="Назад">&lt;</button>
-                    <button type="button" class="control-btn" data-carousel-next aria-label="Вперед">&gt;</button>
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-prev
+                      aria-label="Назад"
+                    >&lt;</button>
+
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-next
+                      aria-label="Вперед"
+                    >&gt;</button>
                   </div>
+
                 </div>
               </div>
 
-              <div class="case-info-card">
+              <header class="case-info-card">
                 <span class="case-info-card__num">02</span>
                 <h3 class="case-info-card__title">ELEVEN CRYPTO</h3>
-                <p class="case-info-card__desc">Финтех-платформа /<br>Криптоэкосистема</p>
-              </div>
+
+                <p class="case-info-card__desc">
+                  Финтех-платформа /<br>
+                  Криптоэкосистема
+                </p>
+              </header>
+
             </div>
 
             <div class="case-task-card">
-              <h4 class="case-task-card__label">Задача:</h4>
+              <span class="case-task-card__label">Задача:</span>
+
               <p class="case-task-card__text">
-                Сформировать закрытый, статусный и авангардный визуальный код для криптовалютного проекта, избегая шаблонных неоновых графиков и блокчейн-сеток.
+                Сформировать закрытый, статусный и авангардный визуальный код
+                для криптовалютного проекта, избегая шаблонных неоновых
+                графиков и блокчейн-сеток.
               </p>
             </div>
           </article>
 
-          <!-- КЕЙС 03 -->
+          <!-- Кейс 03 -->
           <article class="case-item">
             <div class="case-top">
+
               <div class="carousel-wrapper" data-carousel>
                 <div class="carousel-track" data-carousel-track>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-3.png" alt="Quote Paragon 1">
+                    <img
+                      src="assets/images/slide-3.png"
+                      alt="Айдентика бренда Quote Paragon"
+                    >
                   </div>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-3.png" alt="Quote Paragon 2">
+                    <img
+                      src="assets/images/slide-3.png"
+                      alt="Айдентика бренда Quote Paragon, слайд 2"
+                    >
                   </div>
+
                 </div>
+
                 <div class="carousel-controls-group">
+
                   <div class="carousel-dots">
-                    <button type="button" class="carousel-dot active"></button>
-                    <button type="button" class="carousel-dot"></button>
+                    <button
+                      type="button"
+                      class="carousel-dot active"
+                      aria-label="Слайд 1"
+                      aria-current="true"
+                    ></button>
+
+                    <button
+                      type="button"
+                      class="carousel-dot"
+                      aria-label="Слайд 2"
+                      aria-current="false"
+                    ></button>
                   </div>
+
                   <div class="carousel-controls">
-                    <button type="button" class="control-btn" data-carousel-prev aria-label="Назад">&lt;</button>
-                    <button type="button" class="control-btn" data-carousel-next aria-label="Вперед">&gt;</button>
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-prev
+                      aria-label="Назад"
+                    >&lt;</button>
+
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-next
+                      aria-label="Вперед"
+                    >&gt;</button>
                   </div>
+
                 </div>
               </div>
 
-              <div class="case-info-card">
+              <header class="case-info-card">
                 <span class="case-info-card__num">03</span>
                 <h3 class="case-info-card__title">QUOTE PARAGON</h3>
-                <p class="case-info-card__desc">Инвестиционный<br>консалтинг /<br>Финансовый сервис</p>
-              </div>
+
+                <p class="case-info-card__desc">
+                  Инвестиционный<br>
+                  консалтинг /<br>
+                  Финансовый сервис
+                </p>
+              </header>
+
             </div>
 
             <div class="case-task-card">
-              <h4 class="case-task-card__label">Задача:</h4>
+              <span class="case-task-card__label">Задача:</span>
+
               <p class="case-task-card__text">
-                Спроектировать айдентику с опорой на фундаментальность, консервативную надежность и институциональный масштаб.
+                Спроектировать айдентику с опорой на фундаментальность,
+                консервативную надежность и институциональный масштаб.
               </p>
             </div>
           </article>
 
-          <!-- КЕЙС 04 (Зеркальный) -->
+          <!-- Кейс 04 -->
           <article class="case-item case-item--reversed">
             <div class="case-top">
+
               <div class="carousel-wrapper" data-carousel>
                 <div class="carousel-track" data-carousel-track>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-4.png" alt="Vzlet 1">
+                    <img
+                      src="assets/images/slide-4.png"
+                      alt="Айдентика бренда VZLET"
+                    >
                   </div>
+
                   <div class="carousel-slide">
-                    <img src="assets/images/slide-4.png" alt="Vzlet 2">
+                    <img
+                      src="assets/images/slide-4.png"
+                      alt="Айдентика бренда VZLET, слайд 2"
+                    >
                   </div>
+
                 </div>
+
                 <div class="carousel-controls-group">
+
                   <div class="carousel-dots">
-                    <button type="button" class="carousel-dot active"></button>
-                    <button type="button" class="carousel-dot"></button>
+                    <button
+                      type="button"
+                      class="carousel-dot active"
+                      aria-label="Слайд 1"
+                      aria-current="true"
+                    ></button>
+
+                    <button
+                      type="button"
+                      class="carousel-dot"
+                      aria-label="Слайд 2"
+                      aria-current="false"
+                    ></button>
                   </div>
+
                   <div class="carousel-controls">
-                    <button type="button" class="control-btn" data-carousel-prev aria-label="Назад">&lt;</button>
-                    <button type="button" class="control-btn" data-carousel-next aria-label="Вперед">&gt;</button>
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-prev
+                      aria-label="Назад"
+                    >&lt;</button>
+
+                    <button
+                      type="button"
+                      class="control-btn"
+                      data-carousel-next
+                      aria-label="Вперед"
+                    >&gt;</button>
                   </div>
+
                 </div>
               </div>
 
-              <div class="case-info-card">
+              <header class="case-info-card">
                 <span class="case-info-card__num">04</span>
                 <h3 class="case-info-card__title">VZLET</h3>
-                <p class="case-info-card__desc">Организация<br>соревнований<br>FPV-дрон-рейсинга</p>
-              </div>
+
+                <p class="case-info-card__desc">
+                  Организация<br>
+                  соревнований<br>
+                  FPV-дрон-рейсинга
+                </p>
+              </header>
+
             </div>
 
             <div class="case-task-card">
-              <h4 class="case-task-card__label">Задача:</h4>
+              <span class="case-task-card__label">Задача:</span>
+
               <p class="case-task-card__text">
-                Собрать спортивную технологичную айдентику для соревнований по скоростному пилотированию дронов с адаптацией под цифровую среду и реальную гоночную трассу.
+                Собрать спортивную технологичную айдентику для соревнований
+                по скоростному пилотированию дронов с адаптацией под цифровую
+                среду и реальную гоночную трассу.
               </p>
             </div>
           </article>
 
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: КЕЙСЫ ШОУРУМА ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: БАННЕР ОПЫТ РАБОТЫ С БРЕНДАМИ ==================== -->
+      <!-- Опыт работы с брендами -->
       <section class="brands-banner-section" id="experience">
         <div class="brands-banner-container">
-          <img src="assets/images/brands-banner-bg.png" alt="Анатомические гравюры — опыт работы с брендами" class="brands-banner-bg">
-          <div class="brands-banner-vignette"></div>
 
-          <div class="brands-banner-badge">
-            <h2 class="brands-banner-title">ОПЫТ РАБОТЫ С БРЕНДАМИ</h2>
+          <!-- 1. ДЕСКТОПНЫЙ БАННЕР (СТРОГО В ОДНУ СТРОКУ ПО ЦЕНТРУ) -->
+          <div class="brands-banner-desktop">
+            <img
+              src="assets/images/brands-banner-bg.png"
+              alt=""
+              aria-hidden="true"
+              class="brands-banner-bg"
+            >
+
+            <div class="brands-banner-vignette"></div>
+
+            <div class="brands-banner-badge">
+              <h2 class="brands-banner-title">
+                ОПЫТ РАБОТЫ С БРЕНДАМИ
+              </h2>
+            </div>
           </div>
+
+          <!-- 2. МОБИЛЬНЫЙ БАННЕР (В ДВЕ СТРОКИ) -->
+          <div class="brands-banner-mobile">
+            <img
+              src="assets/images/brands-anatomy-bg.png"
+              alt="Опыт работы с брендами"
+              class="brands-banner-mobile__bg"
+            >
+
+            <div class="brands-banner-mobile__vignette"></div>
+
+            <div class="brands-banner-mobile__badge">
+              <h2 class="brands-banner-mobile__title">
+                ОПЫТ РАБОТЫ<br>С БРЕНДАМИ
+              </h2>
+            </div>
+          </div>
+
         </div>
       </section>
-      <!-- ==================== /СЕКЦИЯ: БАННЕР ОПЫТ РАБОТЫ С БРЕНДАМИ ==================== -->
 
-      <!-- ==================== СЕКЦИЯ: БРЕНДЫ И КОНТАКТЫ ==================== -->
+      <!-- Бренды и контакты -->
       <section class="brands-and-contacts" id="contacts">
-        
-        <!-- 1. Блок брендов -->
+
         <div class="brands-container">
-          <div class="brands-grid-top">
-            <div class="brand-item brand-item--lentv">
-              <img src="assets/images/brand-lentv.png" alt="ЛенТВ 24">
+
+          <!-- ДЕСКТОПНАЯ СЕТКА ЛОГОТИПОВ -->
+          <div class="brands-desktop-layout">
+            <div class="brands-grid-top">
+              <div class="brand-item brand-item--lentv">
+                <img
+                  src="assets/images/brand-lentv.png"
+                  alt="ЛенТВ 24"
+                >
+              </div>
+
+              <div class="brand-item brand-item--kr">
+                <img
+                  src="assets/images/brand-kr-culture.png"
+                  alt="Красногвардейский центр культуры"
+                >
+              </div>
             </div>
+
+            <div class="brands-grid-bottom">
+              <div class="brand-item">
+                <img
+                  src="assets/images/brand-triangle.png"
+                  alt="Бренд"
+                >
+              </div>
+
+              <div class="brand-item">
+                <img
+                  src="assets/images/brand-dobrovolec.png"
+                  alt="Ленинградский доброволец"
+                >
+              </div>
+
+              <div class="brand-item">
+                <img
+                  src="assets/images/brand-prst.png"
+                  alt="ПР СТ"
+                >
+              </div>
+
+              <div class="brand-item">
+                <img
+                  src="assets/images/brand-museum.png"
+                  alt="Музей боевого братства России"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- МОБИЛЬНАЯ СЕТКА ЛОГОТИПОВ (1-В-1 КАК В МАКЕТЕ FIGMA) -->
+          <div class="brands-mobile-layout">
+            <!-- 1. Красногвардейский центр культуры (по центру) -->
             <div class="brand-item brand-item--kr">
-              <img src="assets/images/brand-kr-culture.png" alt="Красногвардейский центр культуры">
+              <img
+                src="assets/images/brand-kr-culture.png"
+                alt="Красногвардейский центр культуры"
+              >
+            </div>
+
+            <!-- 2. Пара: Треугольник + ПР СТ -->
+            <div class="brands-mobile-row">
+              <div class="brand-item brand-item--triangle">
+                <img
+                  src="assets/images/brand-triangle.png"
+                  alt="Бренд"
+                >
+              </div>
+              <div class="brand-item brand-item--prst">
+                <img
+                  src="assets/images/brand-prst.png"
+                  alt="ПР СТ"
+                >
+              </div>
+            </div>
+
+            <!-- 3. ЛенТВ 24 (по центру) -->
+            <div class="brand-item brand-item--lentv">
+              <img
+                src="assets/images/brand-lentv.png"
+                alt="ЛенТВ 24"
+              >
+            </div>
+
+            <!-- 4. Пара: Ленинградский доброволец + Музей -->
+            <div class="brands-mobile-row">
+              <div class="brand-item brand-item--dobrovolec">
+                <img
+                  src="assets/images/brand-dobrovolec.png"
+                  alt="Ленинградский доброволец"
+                >
+              </div>
+              <div class="brand-item brand-item--museum">
+                <img
+                  src="assets/images/brand-museum.png"
+                  alt="Музей боевого братства России"
+                >
+              </div>
             </div>
           </div>
 
-          <div class="brands-grid-bottom">
-            <div class="brand-item">
-              <img src="assets/images/brand-triangle.png" alt="Бренд">
-            </div>
-            <div class="brand-item">
-              <img src="assets/images/brand-dobrovolec.png" alt="Ленинградский доброволец">
-            </div>
-            <div class="brand-item">
-              <img src="assets/images/brand-prst.png" alt="ПР СТ">
-            </div>
-            <div class="brand-item">
-              <img src="assets/images/brand-museum.png" alt="Музей боевого братства России">
-            </div>
-          </div>
-
+          <!-- ДИСКЛЕЙМЕР -->
           <p class="brands-disclaimer">
-            *Все товарные знаки и логотипы принадлежат их законным правообладателям. Размещены исключительно в информационных целях для демонстрации профессионального опыта (портфолио). В ряде проектов работы выполнялись в составе рабочих групп и на условиях субподряда. Не является офертой или рекламой.
+            *Все товарные знаки и логотипы принадлежат их законным
+            правообладателям. Размещены исключительно в информационных целях
+            для демонстрации профессионального опыта (портфолио). В ряде
+            проектов работы выполнялись в составе рабочих групп и на условиях
+            субподряда. Не является офертой или рекламой.
           </p>
+
         </div>
 
-        <!-- 2. Блок контактов -->
         <div class="contacts-container">
+
           <div class="contacts-badge">
-            <h2 class="contacts-badge__title">НУЖЕН ДИЗАЙН?</h2>
+            <h2 class="contacts-badge__title">
+              НУЖЕН ДИЗАЙН?
+            </h2>
           </div>
 
           <div class="contacts-list">
-            <a href="https://t.me/nichegosmeshnogo777" target="_blank" rel="noopener noreferrer" class="contact-card">
+
+            <a
+              href="https://t.me/nichegosmeshnogo777"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card"
+            >
               <div class="contact-card__qr">
-                <img src="assets/images/qr-tg.png" alt="QR-код Telegram">
+                <img
+                  src="assets/images/qr-tg.png"
+                  alt=""
+                  aria-hidden="true"
+                >
               </div>
-              <span class="contact-card__text">T.ME/NICHEGOSMESHNOGO777</span>
+
+              <span class="contact-card__text">
+                T.ME/NICHEGOSMESHNOGO777
+              </span>
             </a>
 
-            <a href="https://instagram.com/nichegosmeshnogo" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <a
+              href="https://instagram.com/nichegosmeshnogo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card"
+            >
               <div class="contact-card__qr">
-                <img src="assets/images/qr-inst.png" alt="QR-код Instagram">
+                <img
+                  src="assets/images/qr-inst.png"
+                  alt=""
+                  aria-hidden="true"
+                >
               </div>
-              <span class="contact-card__text">NICHEGOSMESHNOGO</span>
+
+              <span class="contact-card__text">
+                NICHEGOSMESHNOGO
+              </span>
             </a>
+
           </div>
 
           <div class="contacts-phone">
             <span class="contacts-phone__label">ТЕЛ:</span>
-            <a href="tel:+79516593179" class="contacts-phone__value">+7( 951 ) 659 - 31 - 79</a>
+
+            <a
+              href="tel:+79516593179"
+              class="contacts-phone__value"
+            >
+              +7 (951) 659-31-79
+            </a>
           </div>
+
         </div>
 
       </section>
-      <!-- ==================== /СЕКЦИЯ: БРЕНДЫ И КОНТАКТЫ ==================== -->
 
     </main>
 
   </div>
-  <!-- ==================== /КОРНЕВОЙ ХОЛСТ МАСШТАБИРОВАНИЯ ==================== -->
 
   <script type="module" src="js/main.js?v=2"></script>
+
 </body>
 </html>

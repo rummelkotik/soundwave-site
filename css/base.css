@@ -1,43 +1,87 @@
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+
+/* Акцентный техно-шрифт из макета */
+@font-face {
+  font-family: 'HS_LunaObscura';
+  src:
+    url('../assets/fonts/HS_LunaObscura.woff2') format('woff2'),
+    url('../assets/fonts/HS_LunaObscura.otf') format('opentype'),
+    url('../assets/fonts/HS_LunaObscura.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Алиас с пробелом на случай опечаток в классах */
+@font-face {
+  font-family: 'HS LunaObscura';
+  src:
+    url('../assets/fonts/HS_LunaObscura.woff2') format('woff2'),
+    url('../assets/fonts/HS_LunaObscura.otf') format('opentype'),
+    url('../assets/fonts/HS_LunaObscura.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: var(--bg-main);
   overflow-x: hidden;
   width: 100%;
-  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-main);
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+/* Доступность: отключение тяжелых анимаций по системным настройкам */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* Холст, который масштабируется через transform */
+/* ==========================================================================
+   LAYOUT CANVAS
+   ========================================================================== */
+
+/* Холст, который масштабируется через zoom */
 .site-scale-root {
   width: 2560px !important;
   min-width: 2560px !important;
   max-width: 2560px !important;
   position: relative;
-  transform-origin: top left;
-  display: block;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
+  padding-inline: var(--container-padding);
 }
 
 .section {
@@ -72,4 +116,106 @@ body {
 
 .cases-section {
   background: radial-gradient(circle at top right, rgba(245, 197, 24, 0.05), transparent 40%);
+}
+
+/* ==========================================================================
+   ЕДИНЫЕ ПЛАШКИ И ШРИФТЫ ДЛЯ ВСЕХ БАННЕРОВ
+   ========================================================================== */
+
+/* 1. Сам текст заголовка в плашках */
+.showroom-badge__title,
+.showroom-banner__title,
+.process-banner-badge__title,
+.process-badge__title,
+.process-banner__title,
+.approach-badge__title,
+.approach-banner__title,
+.brands-badge__title,
+.brands-banner__title,
+.banner-badge__title,
+.cta-badge,
+.cta-badge__title,
+.contact-badge,
+.contact-btn,
+[class*="badge__title"],
+[class*="banner__title"] {
+  font-family: 'HS_LunaObscura', 'HS LunaObscura', 'Michroma', sans-serif !important;
+  font-size: 22px !important; /* Нормальный аккуратный размер (-30% от исходного) */
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Сброс для вложенных тегов, чтобы не было повторного умножения размера */
+[class*="badge"] h1, [class*="badge"] h2, [class*="badge"] h3, [class*="badge"] h4,
+[class*="banner"] h1, [class*="banner"] h2, [class*="banner"] h3, [class*="banner"] h4,
+[class*="badge"] span, [class*="banner"] span,
+[class*="badge"] p, [class*="banner"] p,
+[class*="badge"] button, [class*="banner"] button {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+/* ==========================================================================
+   ЕДИНЫЕ ПЛАШКИ И ШРИФТЫ ДЛЯ ХОЛСТА 2560px (+10% К РАЗМЕРУ)
+   ========================================================================== */
+
+/* 1. Заголовки плашек на большом масштабируемом холсте */
+.showroom-badge__title,
+.showroom-banner__title,
+.process-banner-badge__title,
+.process-badge__title,
+.process-banner__title,
+.approach-badge__title,
+.approach-banner__title,
+.brands-badge__title,
+.brands-banner__title,
+.banner-badge__title,
+.cta-badge,
+.cta-badge__title,
+.contact-badge,
+.contact-btn,
+[class*="badge__title"],
+[class*="banner__title"],
+[class*="badge"] h1, [class*="badge"] h2, [class*="badge"] h3,
+[class*="banner"] h1, [class*="banner"] h2, [class*="banner"] h3 {
+  font-family: 'HS_LunaObscura', 'HS LunaObscura', 'Michroma', sans-serif !important;
+  font-size: 46px !important; /* Увеличено на 10% (было 42px) */
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  line-height: 1.2 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Мобильные экраны */
+@media (max-width: 768px) {
+  .showroom-badge__title,
+  .showroom-banner__title,
+  .process-banner-badge__title,
+  .process-badge__title,
+  .process-banner__title,
+  .approach-badge__title,
+  .approach-banner__title,
+  .brands-badge__title,
+  .brands-banner__title,
+  .banner-badge__title,
+  .cta-badge,
+  .cta-badge__title,
+  .contact-badge,
+  .contact-btn,
+  [class*="badge__title"],
+  [class*="banner__title"],
+  [class*="badge"] h1, [class*="badge"] h2, [class*="badge"] h3,
+  [class*="banner"] h1, [class*="banner"] h2, [class*="banner"] h3 {
+    font-size: 16.5px !important; /* Увеличено на 10% (было 15px) */
+    letter-spacing: 0.06em !important;
+  }
 }

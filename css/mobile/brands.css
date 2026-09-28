@@ -1,0 +1,153 @@
+@media (max-width: 768px) {
+  /* 1. Скрываем десктопную раскладку целиком */
+  .brands-desktop-layout,
+  .brands-grid-top,
+  .brands-grid-bottom {
+    display: none !important;
+  }
+
+  /* 2. Общая секция брендов и контактов — компактные мобильные отступы */
+  .brands-and-contacts {
+    padding-top: 40px !important;
+    padding-bottom: 60px !important;
+    background-size: cover !important;
+  }
+
+  /* 3. Основной контейнер брендов */
+  .brands-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 24px 30px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 4. Вертикальная колонка рядов по макету */
+  .brands-mobile-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 34px !important;
+  }
+
+  /* 5. Парные ряды (по 2 логотипа в строке) */
+  .brands-mobile-row {
+    width: 100% !important;
+    max-width: 320px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+  }
+
+  /* 6. Базовый элемент логотипа */
+  .brand-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .brand-item img {
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.95 !important;
+    object-fit: contain !important;
+  }
+
+  /* 7. Точные размеры под каждый логотип по макету Figma */
+  .brand-item--kr img {
+    width: 250px !important;
+    height: auto !important;
+    max-height: 52px !important;
+  }
+
+  .brand-item--triangle img {
+    width: 110px !important;
+    height: auto !important;
+    max-height: 100px !important;
+  }
+
+  .brand-item--prst img {
+  width: 95px !important;
+  height: auto !important;
+  max-height: 95px !important;
+  filter: none !important; /* Отключаем инверсию, чтобы круг не заливался белым */
+}
+
+  .brand-item--lentv img {
+    width: 190px !important;
+    height: auto !important;
+    max-height: 48px !important;
+  }
+
+  .brand-item--dobrovolec img {
+    width: 115px !important;
+    height: auto !important;
+    max-height: 115px !important;
+  }
+
+  .brand-item--museum img {
+    width: 105px !important;
+    height: auto !important;
+    max-height: 105px !important;
+  }
+
+  /* 8. Дисклеймер снизу (шрифт увеличен в 2 раза) */
+  .brands-disclaimer {
+    width: 100% !important;
+    max-width: 90% !important;
+    margin: 36px auto 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.02em !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-align: left !important;
+  }
+
+  /* 9. Плашка «НУЖЕН ДИЗАЙН?» — эталонные пропорции из шоурума */
+  .contacts-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 40px !important; /* Боковые отступы как у баннера шоурума */
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .contacts-badge {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+    margin: 0 auto 36px !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 18px !important;
+  }
+
+  .contacts-badge__title {
+    font-family: 'HS_LunaObscura', 'Michroma', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

@@ -1,12 +1,6 @@
-/* Акцентный техно-шрифт из макета (кнопка, футер SISTEM/LOGO/ENGINEERING) */
-@font-face {
-  font-family: 'HS LunaObscura';
-  src: url('../assets/fonts/HS_LunaObscura.woff2') format('woff2'),
-       url('../assets/fonts/HS_LunaObscura.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
 
 :root {
   /* Цвета макета */
@@ -14,7 +8,7 @@
   --bg-surface: #0b0d10;
   --bg-surface-elevated: #1e1e24;
 
-  /* Единый точный желтый акцент без зелени и грязи (под рамку, кнопку и заголовок) */
+  /* Единый точный желтый акцент без зелени и грязи */
   --color-accent: #fcee0a;
   --color-accent-hover: #e5ff00;
 
@@ -36,7 +30,7 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --radius-badge: 26px;   /* Синхронизированный радиус плашек "О подходе" и "Процесс" */
+  --radius-badge: 26px;   /* Синхронизированный радиус плашек */
   --radius-btn: 999px;    /* Капсульная кнопка */
 
   /* Анимации */

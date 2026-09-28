@@ -12,12 +12,13 @@
   box-sizing: border-box;
 }
 
-/* Статуя на постаменте слева */
+/* Статуя жестко прижата к левому краю и вырвана из потока через absolute */
 .approach-header-icon {
   position: absolute;
   left: 0;
   top: 0;
-  height: 540px;
+  bottom: 0;
+  height: 100%;
   width: auto;
   z-index: 1;
   pointer-events: none;
@@ -33,22 +34,24 @@
   object-position: left center;
 }
 
+/* Градиент, который плавно растворяет серый фон тумбы в черный цвет сайта */
 .approach-header-icon::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(to right, transparent 0%, #000000 75%, #000000 100%);
+  background: linear-gradient(to right, transparent 0%, #000000 80%, #000000 100%);
   pointer-events: none;
 }
 
-/* Стеклянная плашка */
+/* Стеклянная плашка строго по центру баннера */
 .approach-header-badge {
   position: relative;
   z-index: 2;
-  width: calc(100% - clamp(80px, 20vw, 500px));
+  margin: 0 auto;
+  width: calc(100% - clamp(80px, 15vw, 400px));
   max-width: 1880px;
   height: 200px;
 
@@ -68,13 +71,13 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Текст внутри плашки */
+/* Текст «О ПОДХОДЕ» */
 .approach-header-title {
-  font-family: 'Michroma', sans-serif;
+  font-family: 'HS_LunaObscura', sans-serif !important;
   font-size: clamp(38px, 4.8vw, 110px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fcee0a;
   text-shadow: none;

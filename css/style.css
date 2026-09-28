@@ -1,3 +1,4 @@
+@import './fonts.css';
 @import './variables.css';
 @import './reset.css';
 @import './base.css';
@@ -14,3 +15,18 @@
 @import './components/brands-banner.css';
 @import './components/brands.css';
 @import './components/contacts.css';
+
+/* МОБИЛЬНЫЕ КОМПОНЕНТЫ */
+@import './mobile/adaptive.css';
+@import './mobile/header.css';
+@import './mobile/hero.css';
+@import './mobile/card.css';
+@import './mobile/carousel.css';
+@import './mobile/approach-banner.css';
+@import './mobile/approach.css';
+@import './mobile/process-banner.css';
+@import './mobile/process-steps.css';
+@import './mobile/showroom.css';
+@import './mobile/brands-banner.css';
+@import './mobile/brands.css';
+@import './mobile/contacts.css';

@@ -1,0 +1,74 @@
+/* css/mobile/showroom.css */
+
+@media (max-width: 768px) {
+  .showroom-banner-section {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    /* Убираем любые отступы и фиксированную десктопную высоту */
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+  }
+
+  .showroom-banner-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 230px !important; /* Уменьшенная сбалансированная высота */
+    margin: 0 !important;
+    padding: 0 40px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background-image: url('../../assets/images/showroom-banner-mobile.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0 !important;
+  }
+
+  /* Светлая полупрозрачная стеклянная плашка */
+  .showroom-badge {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 74px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+
+    /* Светлый полупрозрачный фон и сильный блюр подложки */
+    background: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+
+    /* Тонкая светлая граница стекла и мягкая глубина */
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* Черный контрастный текст */
+  .showroom-badge__title {
+    font-family: 'Orbitron', -apple-system, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1 !important;
+    color: #0b0c10 !important;
+    -webkit-text-fill-color: #0b0c10 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+}

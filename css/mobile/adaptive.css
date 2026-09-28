@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  :root {
+    /* 1 единица = 1px макета при ширине экрана 402px.
+       На iPhone SE (375px) она автоматически станет 0.9328px */
+    --m: calc(100vw / 402);
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #060607 !important;
+  }
+
+  .site-scale-root {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+}
