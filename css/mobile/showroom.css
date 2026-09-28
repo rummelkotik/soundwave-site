@@ -71,4 +71,46 @@
     text-align: center !important;
     margin: 0 !important;
   }
+
+  /* Секция с карточками кейсов — фон скалы на всю высоту */
+  .showroom-cases-section {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: calc(30 * var(--m)) 0 calc(60 * var(--m)) !important;
+    background-color: #070809 !important;
+    background-image: url('../../assets/images/approach-bg.png') !important;
+    background-size: 100% auto !important;
+    background-repeat: repeat-y !important;
+    background-position: top center !important;
+    overflow: hidden !important;
+    z-index: 5 !important;
+    transform: translateZ(0) !important;
+  }
+
+  .showroom-cases-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 calc(20 * var(--m)) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: calc(40 * var(--m)) !important;
+  }
+
+  .case-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: calc(16 * var(--m)) !important;
+    width: 100% !important;
+  }
+
+  .case-top {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: calc(16 * var(--m)) !important;
+    width: 100% !important;
+  }
 }
