@@ -13,27 +13,36 @@
     display: none !important;
   }
 
-  /* 2. Секция: бесшовная стыковка с блоком кейсов */
+  /* 2. Секция: сбрасываем десктопные padding-block и min-height */
   .brands-banner-section {
     position: relative !important;
     z-index: 10 !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     margin: 0 !important;
-    margin-top: -2px !important; /* Бесшовная стыковка без белых/черных полос */
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
     padding: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-block: 0 !important;
     overflow: hidden !important;
     background: transparent !important;
   }
 
-  /* 3. Контейнер строго на 100% экрана без паддингов */
+  /* 3. Контейнер строго под мобильные габариты */
   .brands-banner-container {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: calc(230 * var(--m)) !important;
+    min-height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+    padding-block: 0 !important;
+    overflow: hidden !important;
   }
 
   .brands-banner-mobile {
@@ -41,7 +50,8 @@
     width: 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
-    height: calc(230 * var(--m)) !important;
+    height: 100% !important;
+    min-height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
@@ -52,7 +62,7 @@
     background: transparent !important;
   }
 
-  /* 4. Фоновая картинка на весь экран от края до края */
+  /* 4. Фоновая картинка */
   .brands-banner-mobile__bg {
     position: absolute !important;
     inset: 0 !important;
@@ -67,7 +77,7 @@
     transform: translateZ(0) !important;
   }
 
-  /* 5. Легкая виньетка */
+  /* 5. Виньетка */
   .brands-banner-mobile__vignette {
     position: absolute !important;
     inset: 0 !important;
@@ -78,7 +88,7 @@
     pointer-events: none !important;
   }
 
-  /* 6. Плашка со сбалансированным размытием и адаптивными размерами */
+  /* 6. Плашка */
   .brands-banner-mobile__badge {
     position: relative !important;
     z-index: 3 !important;

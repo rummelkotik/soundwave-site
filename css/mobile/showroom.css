@@ -67,7 +67,7 @@
     margin: 0 !important;
   }
 
-  /* Секция кейсов: точная высота по контенту без пустот */
+  /* Секция кейсов: фон на всю фактическую высоту и полное прижатие снизу */
   .showroom-cases-section {
     position: relative !important;
     width: 100% !important;
@@ -75,12 +75,12 @@
     height: auto !important;
     min-height: 0 !important;
     margin: 0 !important;
-    margin-bottom: -4px !important;
+    margin-bottom: 0 !important;
     padding: calc(24 * var(--m)) 0 0 0 !important;
     background-color: #070809 !important;
     background-image: url('../../assets/images/process-rock-mobile.png') !important;
-    background-size: 100% auto !important;
-    background-position: top center !important;
+    background-size: cover !important;
+    background-position: center top !important;
     background-repeat: repeat-y !important;
     overflow: hidden !important;
     z-index: 5 !important;
@@ -118,20 +118,25 @@
     flex-direction: column !important;
     gap: calc(12 * var(--m)) !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
 
-  /* Сброс отступов и высот карточки задачи и последнего кейса */
   .case-task-card {
+    position: relative !important;
     margin-bottom: 0 !important;
   }
 
-  .case-item:last-child {
+  /* Последний кейс: убираем все нижние отступы */
+  .case-item:last-child,
+  .case-item:last-of-type {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
 
-  .case-item:last-child .case-task-card {
+  .case-item:last-child .case-task-card,
+  .case-item:last-of-type .case-task-card {
     margin-bottom: 0 !important;
-    padding-bottom: calc(20 * var(--m)) !important;
+    padding-bottom: calc(16 * var(--m)) !important;
   }
 }
