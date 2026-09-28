@@ -34,7 +34,6 @@
     border-radius: 0 !important;
   }
 
-  /* Светлая матовая плашка */
   .showroom-badge {
     position: relative !important;
     z-index: 2 !important;
@@ -68,35 +67,33 @@
     margin: 0 !important;
   }
 
- /* Секция кейсов — ставим фактурный темный сланец */
+  /* Секция кейсов: фон сланца и стыковка в 0 снизу */
   .showroom-cases-section {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: calc(24 * var(--m)) 0 calc(32 * var(--m)) !important;
+    margin-bottom: 0 !important;
+    padding: calc(24 * var(--m)) 0 0 0 !important; /* 0 снизу */
     background-color: #070809 !important;
-    
-    /* Точное имя файла сланца */
     background-image: url('../../assets/images/process-rock-mobile.png') !important;
-    background-size: cover !important;
-    background-position: center top !important;
+    background-size: 100% auto !important;
+    background-position: top center !important;
     background-repeat: repeat-y !important;
-    
     overflow: hidden !important;
     z-index: 5 !important;
-    transform: translateZ(0) !important;
   }
 
   .showroom-cases-container {
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 calc(16 * var(--m)) !important;
+    padding: 0 calc(16 * var(--m)) calc(16 * var(--m)) !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: calc(24 * var(--m)) !important;
+    gap: calc(20 * var(--m)) !important;
   }
 
   .case-item {
@@ -105,6 +102,7 @@
     gap: calc(12 * var(--m)) !important;
     width: 100% !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
   .case-top {
