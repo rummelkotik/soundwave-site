@@ -1,12 +1,12 @@
 /* css/mobile/process-banner.css */
 
 @media (max-width: 768px) {
-  /* 1. ЖЕСТКО СКРЫВАЕМ ДЕСКТОПНЫЙ ДУБЛЬ */
+  /* Скрываем десктопный блок */
   .process-banner-desktop {
     display: none !important;
   }
 
-  /* 2. СЕКЦИЯ БАННЕРА */
+  /* Секция на всю ширину экрана без боковых паддингов, в стык */
   .process-banner-section {
     position: relative !important;
     width: 100% !important;
@@ -14,8 +14,7 @@
     height: auto !important;
     min-height: 0 !important;
     margin: 0 !important;
-    padding: calc(18 * var(--m)) calc(16 * var(--m)) !important;
-    box-sizing: border-box !important;
+    padding: 0 !important;
     background-color: #070809 !important;
     overflow: hidden !important;
   }
@@ -30,21 +29,21 @@
     padding: 0 !important;
   }
 
-  /* 3. МОБИЛЬНЫЙ БАННЕР */
+  /* Мобильный баннер: высота и форма в точности как в шоуруме */
   .process-banner-mobile {
     position: relative !important;
     width: 100% !important;
-    height: calc(110 * var(--m)) !important;
-    min-height: calc(110 * var(--m)) !important;
+    height: calc(180 * var(--m)) !important;
+    min-height: calc(180 * var(--m)) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: calc(16 * var(--m)) !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
-    background: #000000 !important;
+    background: #0d0f12 !important;
   }
 
-  /* Анатомический фон */
+  /* Фоновое анатомическое изображение */
   .process-banner-mobile__bg {
     position: absolute !important;
     top: 50% !important;
@@ -53,7 +52,8 @@
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    opacity: 0.35 !important;
+    object-position: center !important;
+    opacity: 0.8 !important;
     pointer-events: none !important;
     z-index: 1 !important;
   }
@@ -61,11 +61,11 @@
   .process-banner-mobile__vignette {
     position: absolute !important;
     inset: 0 !important;
-    background: radial-gradient(circle, transparent 30%, rgba(7, 8, 9, 0.8) 100%) !important;
+    background: rgba(0, 0, 0, 0.15) !important;
     z-index: 2 !important;
   }
 
-  /* 4. КАПСУЛА-БЕЙДЖ */
+  /* Капсула бейджа: светлое стекло как в шоуруме */
   .process-banner-mobile__badge {
     position: relative !important;
     z-index: 3 !important;
@@ -73,29 +73,27 @@
     align-items: center !important;
     justify-content: center !important;
     width: auto !important;
-    max-width: calc(100% - 32px) !important;
-    padding: calc(10 * var(--m)) calc(18 * var(--m)) !important;
+    padding: calc(14 * var(--m)) calc(28 * var(--m)) !important;
     box-sizing: border-box !important;
 
-    background: rgba(18, 20, 24, 0.55) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
+    background: rgba(220, 225, 230, 0.75) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.28) !important;
-    border-radius: calc(30 * var(--m)) !important;
-    box-shadow: 0 calc(6 * var(--m)) calc(20 * var(--m)) rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: calc(20 * var(--m)) !important;
+    box-shadow: 0 calc(8 * var(--m)) calc(28 * var(--m)) rgba(0, 0, 0, 0.35) !important;
   }
 
-  /* Текст: идеальный размер под капсулу */
+  /* Заголовок: жирный черный шрифт как в шоуруме */
   .process-banner-mobile__title {
     font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: calc(12.5 * var(--m)) !important;
-    font-weight: 700 !important;
-    line-height: 1.1 !important;
-    letter-spacing: 0.05em !important;
+    font-size: calc(15 * var(--m)) !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.04em !important;
     text-transform: uppercase !important;
-    color: #ffffff !important;
+    color: #0b0c0e !important;
     white-space: nowrap !important;
     text-align: center !important;
     margin: 0 !important;
