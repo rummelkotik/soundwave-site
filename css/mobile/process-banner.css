@@ -1,12 +1,12 @@
 /* css/mobile/process-banner.css */
 
 @media (max-width: 768px) {
-  /* Скрываем десктопный блок */
+  /* Скрываем десктопный дубль */
   .process-banner-desktop {
     display: none !important;
   }
 
-  /* Секция на всю ширину экрана без боковых паддингов, в стык */
+  /* Секция баннера на всю ширину экрана */
   .process-banner-section {
     position: relative !important;
     width: 100% !important;
@@ -29,12 +29,12 @@
     padding: 0 !important;
   }
 
-  /* Мобильный баннер: высота и форма в точности как в шоуруме */
+  /* Мобильный баннер: увеличиваем общую высоту как у шоурума */
   .process-banner-mobile {
     position: relative !important;
     width: 100% !important;
-    height: calc(180 * var(--m)) !important;
-    min-height: calc(180 * var(--m)) !important;
+    height: calc(230 * var(--m)) !important;
+    min-height: calc(230 * var(--m)) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -53,7 +53,7 @@
     height: 100% !important;
     object-fit: cover !important;
     object-position: center !important;
-    opacity: 0.8 !important;
+    opacity: 0.85 !important;
     pointer-events: none !important;
     z-index: 1 !important;
   }
@@ -61,39 +61,41 @@
   .process-banner-mobile__vignette {
     position: absolute !important;
     inset: 0 !important;
-    background: rgba(0, 0, 0, 0.15) !important;
+    background: rgba(0, 0, 0, 0.12) !important;
     z-index: 2 !important;
   }
 
-  /* Капсула бейджа: светлое стекло как в шоуруме */
+  /* Капсула-бейдж: точная высота и паддинги как у шоурума */
   .process-banner-mobile__badge {
     position: relative !important;
     z-index: 3 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: auto !important;
-    padding: calc(14 * var(--m)) calc(28 * var(--m)) !important;
+    width: calc(330 * var(--m)) !important;
+    max-width: calc(100% - 32px) !important;
+    height: calc(76 * var(--m)) !important;
+    padding: 0 calc(20 * var(--m)) !important;
     box-sizing: border-box !important;
 
-    background: rgba(220, 225, 230, 0.75) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    background: rgba(225, 230, 235, 0.72) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    border-radius: calc(20 * var(--m)) !important;
-    box-shadow: 0 calc(8 * var(--m)) calc(28 * var(--m)) rgba(0, 0, 0, 0.35) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.55) !important;
+    border-radius: calc(22 * var(--m)) !important;
+    box-shadow: 0 calc(10 * var(--m)) calc(30 * var(--m)) rgba(0, 0, 0, 0.35) !important;
   }
 
-  /* Заголовок: жирный черный шрифт как в шоуруме */
+  /* Заголовок внутри плашки */
   .process-banner-mobile__title {
     font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: calc(15 * var(--m)) !important;
+    font-size: calc(14 * var(--m)) !important;
     font-weight: 900 !important;
     line-height: 1 !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    color: #0b0c0e !important;
+    color: #0c0d10 !important;
     white-space: nowrap !important;
     text-align: center !important;
     margin: 0 !important;
