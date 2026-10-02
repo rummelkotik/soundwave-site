@@ -1,5 +1,3 @@
-import { Carousel } from './modules/carousel.js';
-
 function applyGlobalScale() {
   const root = document.querySelector('.site-scale-root');
   if (!root) return;
@@ -29,9 +27,4 @@ window.addEventListener('resize', applyGlobalScale);
 
 document.addEventListener('DOMContentLoaded', () => {
   applyGlobalScale();
-
-  const carousels = document.querySelectorAll('[data-carousel]');
-  carousels.forEach((el) => {
-    new Carousel(el, { gap: 0 });
-  });
 });

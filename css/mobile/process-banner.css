@@ -29,7 +29,7 @@
     padding: 0 !important;
   }
 
-  /* Мобильный баннер: увеличиваем общую высоту как у шоурума */
+  /* Мобильный баннер */
   .process-banner-mobile {
     position: relative !important;
     width: 100% !important;
@@ -65,17 +65,18 @@
     z-index: 2 !important;
   }
 
-  /* Капсула-бейдж: точная высота и паддинги как у шоурума */
+  /* Капсула-бейдж: аккуратные габариты под 2 строки */
   .process-banner-mobile__badge {
     position: relative !important;
     z-index: 3 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: calc(330 * var(--m)) !important;
+    width: auto !important;
+    min-width: calc(240 * var(--m)) !important;
     max-width: calc(100% - 32px) !important;
-    height: calc(76 * var(--m)) !important;
-    padding: 0 calc(20 * var(--m)) !important;
+    min-height: calc(76 * var(--m)) !important;
+    padding: calc(14 * var(--m)) calc(26 * var(--m)) !important;
     box-sizing: border-box !important;
 
     background: rgba(225, 230, 235, 0.72) !important;
@@ -87,16 +88,16 @@
     box-shadow: 0 calc(10 * var(--m)) calc(30 * var(--m)) rgba(0, 0, 0, 0.35) !important;
   }
 
-  /* Заголовок внутри плашки */
+  /* Заголовок внутри плашки: две строки с нормальным интерлиньяжем */
   .process-banner-mobile__title {
     font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-size: calc(14 * var(--m)) !important;
     font-weight: 900 !important;
-    line-height: 1 !important;
+    line-height: 1.25 !important;
     letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
     color: #0c0d10 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
